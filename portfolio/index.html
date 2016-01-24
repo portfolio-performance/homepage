@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+    <title>Portfolio Performance</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="Portfolio Performance ist ein Open Source Programm mit dem man die historische Performance und den internen Zinsfuß über mehrere Portfolio hinweg berechnen kann.">
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.lightbox-0.5.pack.js"></script>
+
+    <link rel="icon" type="image/png" href="images/pp_32.png" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+
+    <script type="text/javascript">
+    $(function() {
+        $('#content .screenshot a').lightBox();
+    });
+    </script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34744550-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+</head>
+
+<body>
+
+<a href="http://github.com/buchen/portfolio"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+<div id="content">
+
+<h1><img src="images/pp_128.png" width="64" height="64" alt="logo" valign="bottom"/> Portfolio Performance</h1>
+
+<p>Berechne die Performance eines Portfolios anhand aller Transaktionen und über alle Konten hinweg
+inklusive internen Zinsfuß.</p>
+
+<p><ul>
+<li><a href="https://s3.amazonaws.com/name.abuchen.portfolio/0.21.4/PortfolioPerformance-0.21.4-win32.win32.x86.zip">Windows 32bit</a> /
+<a href="https://s3.amazonaws.com/name.abuchen.portfolio/0.21.4/PortfolioPerformance-0.21.4-win32.win32.x86_64.zip">64bit</a>
+<a id="popup">[?]<span>Portfolio Performance ist in Java programmiert. Darum kommt es darauf an, ob die Java Virtual Machine (JVM) in der 32bit oder 64bit Version installiert ist. Das kann man mit dem Befehl <code>java -version</code> auf der Kommandozeile feststellen.</span></a>
+</li>
+<li><a href="https://s3.amazonaws.com/name.abuchen.portfolio/0.21.4/PortfolioPerformance-0.21.4-macosx.cocoa.x86_64.tar.gz">Mac OS X</a> (benötigt  <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java 8</a> <a id="popup">[?]<span>Portfolio Performance ist in Java programmiert und benötigt mindestens Java 8. Es reicht nicht die JRE (Java Runtime Environment / Laufzeitumgebung) zu installieren, sondern man muss das JDK (Java Development Kit / Entwicklungsumgebung) installieren. Das JDK kann über den nebenstehenden Link heruntergeladen werden.</span></a>)</li>
+<li><a href="https://s3.amazonaws.com/name.abuchen.portfolio/0.21.4/PortfolioPerformance-0.21.4-linux.gtk.x86.tar.gz">Linux 32bit</a> /
+<a href="https://s3.amazonaws.com/name.abuchen.portfolio/0.21.4/PortfolioPerformance-0.21.4-linux.gtk.x86_64.tar.gz">64bit</a></li>
+</ul>
+</p>
+
+Aktuelle Version 0.21.4 (via Online Aktualisierung & Download) - <a href="new_and_noteworthy.html">was ist neu?</a>
+
+<h2>Screencast</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F0VWJM_B4FI" frameborder="0" allowfullscreen></iframe>
+
+<h2>Features</h2>
+
+<ul>
+    <li>Historische Performance auf Basis aller Transaktionen und Dividenden</li>
+    <li>Performance-Berechnung nach der <a href="http://en.wikipedia.org/wiki/True_time-weighted_rate_of_return">True-Time Weighted Rate of Return Methode</a></li>
+    <li>Berechnung des internen Zinsfußes (Internal Rate of Return)</li>
+    <li>Aggregation mehrerer Konten (z.B. Tagesgeldkonten) und mehrerer Portfolios</li>
+    <li>Vergleich mit den deutschen Verbraucherpreisen (Inflationsrate)</li>
+    <li>Aktualisierung der Kurse von <a href="http://de.finance.yahoo.com">Yahoo Finance</a> und beliebigen HTML Seiten</li>
+    <li>Offenes Dateiformat: alle Daten sind als XML gespeichert oder können als CSV exportiert werden</li>
+</ul>
+
+<p>Worum geht es <strong>nicht</strong>?</p>
+<ul>
+    <li>Kein Online Banking und keine Überweisungen</li>
+    <li>Ungeeignet für Girokonten - viel zu viele Bewegungen</li>
+    <li>Keine Kategorisierung von Einnahmen/Ausgaben</li>
+</ul>
+
+<h2>Screenshots</h2>
+
+<div class="screenshot">
+<a title="Ansicht der Wertpapiere - inklusive historischer Kurse, Chart und Transaktionen" href="images/shot_security_list.png">
+    <img src="images/shot_security_list_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Ansicht der Wertpapiere - Suche auf Yahoo Finance um Wertpapiere hinzuzufügen" href="images/shot_add_security.png">
+    <img src="images/shot_add_security_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Ansicht der Wertpapiere - Erfasse Käufe, Verkäufe und Dividendenzahlungen" href="images/shot_security_list_linux.png">
+    <img src="images/shot_security_list_linux_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Transkationen eines Portfolios: Käufe, Verkäufe und Ein-/Auslieferungen" href="images/shot_portfolio_list.png">
+    <img src="images/shot_portfolio_list_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Vermögensaufstellung für alle Konten und Portfolios" href="images/shot_statement_of_assets.png">
+    <img src="images/shot_statement_of_assets_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Verlauf des Gesamtvermögens über 1 bis 5 Jahre" href="images/shot_asset_history.png">
+    <img src="images/shot_asset_history_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Kuchengrafik mit den Positionen aller Portfolios" href="images/shot_holdings.png">
+    <img src="images/shot_holdings_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Asset Allocation: Vergleich der Zielgewichtung mit der tatsächlichen Gewichtung eines Papieres" href="images/shot_asset_allocation.png">
+    <img src="images/shot_asset_allocation_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Performanceaufstellung mit Kurserfolgen, Zinsen und Ein-/Auslieferungen" href="images/shot_performance.png">
+    <img src="images/shot_performance_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Monatlicher Verlauf der Performance - im Vergleich mit der Inflationsrate" href="images/shot_performance_chart.png">
+    <img src="images/shot_performance_chart_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Performance einzelner Wertpapiere (interner Zinsfuß)" href="images/shot_security_performance.png">
+    <img src="images/shot_security_performance_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Export Daten auch als CSV Datei (neben der XML Dateie des Programms)" href="images/shot_csv_export.png">
+    <img src="images/shot_csv_export_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<div class="screenshot">
+<a title="Branchenklassifizierung und Auswertung" href="images/shot_industry_classification.png">
+    <img src="images/shot_industry_classification_thumb.png" alt="" width="307" height="230"/>
+</a>
+</div>
+
+<h2>Links</h2>
+<ul>
+    <li><a href="https://github.com/buchen/portfolio/wiki/FAQ">FAQ</a></li>
+    <li><a href="http://www.wertpapier-forum.de/topic/38306-portfolio-performance-mein-neues-programm/">Forum / Fragen</a></li>
+	<li><a href="https://github.com/buchen/portfolio/issues">Bug Tracker / Features Requests</a></li>
+	<li><a href="https://github.com/buchen/portfolio">Source Code</a></li>
+</ul>
+
+<h2>Twitter</h2>
+
+<a class="twitter-timeline" href="https://twitter.com/portfolioperf" data-widget-id="313260168320258048">Tweets von @portfolioperf</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<h2>Versionen</h2>
+
+<div id="versions">
+<a href="new_and_noteworthy.html">Was ist neu?</a>
+
+<h3>0.21.4 / 17. Januar 2016</h3>
+
+<ul>
+<li>Verbesserung: GBX (Britische Sterling Pence) zusätzlich zu GBP (Britische Pfund) <a href="https://github.com/buchen/portfolio/issues/406">#406</a></li>
+<li>Verbesserung: Mehr Nachkommstellen bei Aktienkursen im Eingabedialog</li>
+<li>Verbesserung: Warnung wenn Buchungen mit einem Datum in der Zukunft erfasst werden</li>
+<li>Fix: Sortierung ohne Berücksichtigung von Groß- und Kleinschreibung <a href="https://github.com/buchen/portfolio/issues/407">#407</a></li>
+</ul>
+
+<h3>0.21.3 / 13. Januar 2016</h3>
+
+<ul>
+<li>Fix: Berechnung des Endwertes bei der Eingabe des Wechselkurses falsch <a href="https://github.com/buchen/portfolio/issues/401">#401</a></li>
+<li>Fix: Benutzerdefinierte Attribute können wieder im Dialog editiert werden <a href="https://github.com/buchen/portfolio/issues/402">#402</a></li>
+</ul>
+
+<h3>0.21.2 / 11. Januar 2016</h3>
+
+<ul>
+<li>Fix: Fenstergrösse und zuletzt geöffnete Dateien werden sich wieder gemerkt</li>
+<li>Fix: Bezeichnung der Wechselkurse unter 'Allgemeine Daten' -> 'Währungen' korrigiert</li>
+</ul>
+
+<h3>0.21.1 / 10. Januar 2016</h3>
+
+<p>Mit dieser Version können Konten und Wertpapiere mit unterschiedlichen
+Währungen anlegt werden. Zusätzlich wurde das Eclipse Framework auf
+Version 4.5.1 aktualisiert.</p>
+
+<p>Weitere Neuerungen:</p>
+<ul>
+<li>CSV/PDF Import: Käufe/Verkäufe in Einlieferungen/Auslieferungen umwandeln <a href="https://github.com/buchen/portfolio/issues/275">#275</a></li>
+<li>CSV Import überarbeitet: Währungen <a href="https://github.com/buchen/portfolio/issues/322">#322</a>, Notizfeld importieren <a href="https://github.com/buchen/portfolio/issues/295">#295</a>, Wertpapiere mit Namen anlegen <a href="https://github.com/buchen/portfolio/issues/350">#350</a>, Gegenbuchungen generieren <a href="https://github.com/buchen/portfolio/issues/351">#351</a></li>
+<li>Klassifizierungen: Kopieren <a href="https://github.com/buchen/portfolio/issues/374">#374</a>, Zustand aufgeklappt/zugeklappt merken <a href="https://github.com/buchen/portfolio/issues/376">#376</a>, Reihenfolge in der Seitennavigation ändern</li>
+<li>Verbesserung: Vermögensaufstellung kann nach allen Spalten sortiert werden</li>
+<li>Neu: DAB Verkäufe per PDF importieren <a href="https://github.com/buchen/portfolio/issues/384">#384</a></li>
+<li>Neu: Proxy-Server über die Einstellung konfigurieren</li>
+<li>Verbesserung: zusätzlich Performance-Spalten in Vermögensaufstellung wählbar</li>
+<li>Wieder da: Auf Yahoo Finance nach Wertpapiere suchen</li>
+</ul>
+
+<h3>0.21.0</h3>
+
+(Beta Versionen)
+
+<h3>0.20.3 / 22. Dezember 2015</h3>
+
+<ul>
+<li>Neu: Buchungen aus ING-Diba und S Broker PDF Dokumenten importieren</li>
+<li>Verbesserung: Buchungen aus Flatex Einzelabrechnungen importieren</li>
+<li>Fix: Berechnung des Einstandswertes wenn das Wertpapier zwischen Portfolios umgebucht wurde</li>
+</ul>
+
+<h3>0.20.2 / 8. November 2015</h3>
+
+<ul>
+<li>Fix: NullPointerException auf Mac OS X El Capitan wird unterdrückt</li>
+<li>Verbesserung: Name der aktuellen Ansicht wird in der Titlezeile dargestellt</li>
+<li>Verbesserung: JAR Dateien werden jetzt signiert</li>
+<li>Fix: Sortierung der Notizen in "Wertpapier Performance" funktioniert nicht</li>
+<li>Fix: Konten wurden unter Umständen nur unvollständig gelöscht</li>
+<li>Fix: Bei Kontoumbuchungen werden nur aktuelle Konten angezeigt</li>
+</ul>
+
+<h3>0.20.1 / 11. Oktober 2015</h3>
+
+<ul>
+<li>Verbesserung: Nach Möglichkeit alle historischen Kurse von Yahoo Finance laden (und nicht nur die der letzten 5 Jahre)</li>
+<li>Verbesserung: Verkaufsbuchungen für Flatex</li>
+<li>Verbesserung: Datum des Aktienkurses in der Vermögensaufstellung</li>
+<li>Verbesserung: Neuer Menüeintrag: Alle Speichern</li>
+<li>Fix: NullPointerException bei korrupten Konfigurationen</li>
+<li>Fix: Fehlermeldung wenn Wertpapiere doppelt erfasst sind</li>
+</ul>
+
+<h3>0.20.0 / 20. September 2015</h3>
+
+<ul>
+<li>Neu: Frei definierbare Attribute für Wertpapiere (z.B. für Felder wie "Stop-Loss-Kurs") <a href="https://github.com/buchen/portfolio/issues/345">#345</a></li>
+<li>Verbesserung: Speichern verschiedener Ansichten der Diagramme <a href="https://github.com/buchen/portfolio/issues/346">#346</a></li>
+<li>Fix: Nachfrage zum Speichern geänderter Dateien vor dem Neustart nach Updates <a href="https://github.com/buchen/portfolio/issues/343">#343</a></li>
+<li>Fix: Schaltfläche um alle geänderten Dateien auf einmal zu speichern <a href="https://github.com/buchen/portfolio/issues/343">#343</a></li>
+<li>Fix: Quartalslinien wurden nicht korrekt eingezeichnet <a href="https://github.com/buchen/portfolio/issues/252">#252</a></li>
+</ul>
+
+<h3>0.19.2 / 26. Juli 2015</h3>
+
+<ul>
+<li>Fix: Fehlermeldung 'Comparison method violates its general contract' in der Liste der Wertpapiere <a href="https://github.com/buchen/portfolio/issues/273">#273</a></li>
+<li>Verbesserung: Commerzbank Ertragsgutschriften aus PDF importieren</li>
+</ul>
+
+<h3>0.19.1 / 12. Juli 2015</h3>
+
+<ul>
+<li>Verbesserung: Reihenfolge der Bookmarks ändern <a href="https://github.com/buchen/portfolio/issues/309">#309</a></li>
+<li>Fix: NullPointerException beim Aktualisieren der Kurse <a href="https://github.com/buchen/portfolio/issues/332">#332</a></li>
+<li>Fix: Buchungen im Portfolio ohne Wertpapiere korrigieren</li>
+</ul>
+
+<h3>0.19.0 / 27. Juni 2015</h3>
+
+<ul>
+<li>Neu: Bookmarks editieren ("Wertpapier -> Im Browser öffnen") <a href="https://github.com/buchen/portfolio/issues/311">#311</a></li>
+<li>Neu: Import des 'Activity Statements' von Interactive Brokers <a href="https://github.com/buchen/portfolio/issues/315">#315</a></li>
+<li>Verbesserung: Bruchteile von Aktien haben jetzt 6 Nachkommastellen <a href="https://github.com/buchen/portfolio/issues/297">#297</a></li>
+<li>Verbesserung: Erkennung von potentiell doppelten Buchungen beim PDF Import <a href="https://github.com/buchen/portfolio/issues/303">#303</a></li>
+<li>Verbesserung: Vorbelegung von Spaltenname und Datumsformat, neues Datumsformat <a href="https://github.com/buchen/portfolio/issues/327">#327</a></li>
+<li>Fix: Eingabefeld unter Linux unterstützt sprachabhängiges Datumsformat <a href="https://github.com/buchen/portfolio/issues/301">#301</a></li>
+<li>Fix: diverse Rechtschreibfehler <a href="https://github.com/buchen/portfolio/issues/312">#312</a> <a href="https://github.com/buchen/portfolio/issues/328">#328</a></li>
+</ul>
+
+<h3>0.18.0 / 31. Mai 2015</h3>
+
+<ul>
+    <li>Neu: PDF Importe für DAB Bank, Consorsbank und Flatex</li>
+    <li>Neu: Erweitertes Kuchendiagramm für die Klassifikationen</li>
+    <li>Verbesserung: neues Kuchendiagramm für Bestände</li>
+    <li>Verbesserung: Beim Editieren der Klassifikationen wird die Summe der zugewiesenen Anteile angezeigt <a href="https://github.com/buchen/portfolio/issues/290">#290</a></li>
+    <li>Verbesserung: Null-Linien im Rendite/Volatilitäts-Diagramm <a href="https://github.com/buchen/portfolio/issues/292">#292</a></li>
+    <li>Fix: Yahoo Kursaktualisierung bricht bei einem fehlerhaften Papier ab <a href="https://github.com/buchen/portfolio/issues/284">#284</a></li>
+    <li>Fix: Keine Rückfrage zum Speichern obwohl Datei geändert ist <a href="https://github.com/buchen/portfolio/issues/287">#287</a></li>
+</ul>
+
+<h3>0.17.2 / 21. April 2015</h3>
+
+<ul>
+    <li>Fix: Notizen der Wertpapiere fehlen in der Vermögensaufstellung</li>
+</ul>
+
+<h3>0.17.1 / 12. April 2015</h3>
+
+<ul>
+    <li>Fix: Zeitachsen für Quartale sind falsch <a href="https://github.com/buchen/portfolio/issues/252">#252</a></li>
+    <li>Verbesserung: Gebühren aus PDF Dokumenten der comdirect einlesen <a href="https://github.com/buchen/portfolio/issues/277">#277</a></li>
+    <li>Neu: Wertpapierkäufe/-verkäufe aus PDF Dokumenten der Deutsche Bank einlesen</li>
+    <li>Neu: Kaufgebühren (prozentual) zu Wertpapieren erfassen, z.B. für Fonds <a href="https://github.com/buchen/portfolio/issues/268">#268</a></li>
+    <li>Neu: Risikokennzahlen in der Wertpapier-Performance Ansicht <a href="https://github.com/buchen/portfolio/issues/269">#269</a></li>
+    <li>Verbesserung: Recovery Time des Maximalen Drawdown <a href="https://github.com/buchen/portfolio/issues/253">#253</a></li>
+    <li>Fix: Mehrere Buchungen auf einmal selektieren und löschen <a href="https://github.com/buchen/portfolio/issues/276">#276</a></li>
+    <li>Fix: NPE beim Import von comdirect Dokumenten wenn Wertpapiere keine ISIN haben</li>
+    <li>Fix: Fehler wenn mehrere Wertpapiere das selbe Ticker Symbol besitzen</li>
+</ul>
+
+<h3>0.17.0 / 22. Februar 2015</h3>
+
+<ul>
+    <li>Neu: Diagramm Rendite vs. Volatilität <a href="https://github.com/buchen/portfolio/issues/244">#244</a></li>
+    <li>Neu: Link zu Ariva.de Fundamentaldaten</li>
+    <li>Fix: Deutsche Bank PDF Dokumente erkennen + Debug Text extrahieren <a href="https://github.com/buchen/portfolio/issues/200">#200</a></li>
+    <li>Fix: HTML Import von Kursen mit '.' als Dezimaltrennzeichen <a href="https://github.com/buchen/portfolio/issues/237">#237</a></li>
+    <li>Fix: Bildlaufleiste beim Editieren von Klassifikationen <a href="https://github.com/buchen/portfolio/issues/227">#227</a></li>
+    <li>Fix: NPE und Texte zu Volatilität/Semi-Volatilität <a href="https://github.com/buchen/portfolio/issues/238">#238</a></li>
+</ul>
+
+<h3>0.16.1 / 8. Februar 2015</h3>
+
+<ul>
+    <li>Fix: Berechnung der Semi-Volatilität korrigiert <a href="https://github.com/buchen/portfolio/issues/234">#234</a></li>
+</ul>
+
+<h3>0.16.0 / 8. Februar 2015</h3>
+
+<ul>
+    <li>Achtung: ab jetzt wird Java Laufzeitumgebung in Version 8 benötigt!</li>
+    <li>Neu: Risikokennzahlen wie Volatilität und MaxDrawdown für das Gesamtportfolio</li>
+    <li>Neu: Klassifizierungen: Diagramme jetzt auch ohne die nicht klassifizierten Papiere</li>
+    <li>Neu: Klassifizierungen: Stapeldiagramm nach Klassifizierungen sortieren (statt nach Grösse)</li>
+    <li>Experimentell: Import von Buchungen aus maxblue Wertpapierdokumenten</li>
+    <li>Fix: Mehr Berichtszeiträume speichern</li>
+    <li>Fix: Einstandskurse werden jetzt immer ohne Gebühren und Steuern errechnet <a href="https://github.com/buchen/portfolio/issues/232">#232</a></li>
+    <li>Fix: TTWROR ist positiv aber trotzdem rot markiert <a href="https://github.com/buchen/portfolio/issues/213">#213</a></li>
+    <li>Fix: Import von comdirect Dokumenten setzt die Stückzahl in die Dividendenbuchung <a href="https://github.com/buchen/portfolio/issues/214">#214</a></li>
+    <li>Fix: Abhängig vom Berichtszeitraum gibt es mehr Markierungen auf der X-Achse (z.B. monatlich) <a href="https://github.com/buchen/portfolio/issues/211">#211</a></li>
+    <li>Experimentell: Englisch (in den Einstellungen wählbar)</li>
+</ul>
+
+<h3>0.15.2 / 15. Dezember 2014</h3>
+
+<ul>
+    <li>Fix: Wertpapierkurs wird bei einer Auslieferung nicht korrekt berechnet</li>
+    <li>Fix: IllegalArgumentException im Kontekmenü "Ohne Klassifizierung"</li>
+</ul>
+
+<h3>0.15.1 / 7. Dezember 2014</h3>
+
+<ul>
+    <li>Neu: Performance-Berechnung eines einzelnen Wertpapiers ohne Betrachtung der Steuern</li>
+    <li>Fix: Steuerrückerstattungen werden jetzt in der "Steuern" Datenreihe berücksichtigt</li>
+    <li>Fix: Performance-Berechnung wenn historische Kurse zum Kaufzeitpunkt fehlen</li>
+    <li>Fix: NullPointerException wenn man ein Konto löscht</li>
+</ul>
+
+<h3>0.15.0 / 30. November 2014</h3>
+
+<ul>
+<li>Neu: Unterschiedliche Kurslieferanten für historische und aktuelle Kurse</li>
+<li>Neu: Neuer Buchungstyp Steuerrückerstattung <a href="https://github.com/buchen/portfolio/issues/41">#41</a></li>
+<li>Neu: Beliebige Ansicht als Startseite festlegen <a href="https://github.com/buchen/portfolio/issues/190">#190</a></li>
+<li>Neu: Übersichtsseite in der Performanceseite <a href="https://github.com/buchen/portfolio/issues/191">#191</a></li>
+<li>Neu: Import von Buchungen aus comdirect PDF Dokumenten (experimentell) <a href="https://github.com/buchen/portfolio/issues/185">#185</a></li>
+<li>Neu: Datenreihe mit Portfolio plus Referenzkonto <a href="https://github.com/buchen/portfolio/issues/189">#189</a></li>
+<li>Neu: Nicht genutzte Portfolio als inaktiv markieren <a href="https://github.com/buchen/portfolio/issues/184">#184</a></li>
+<li>Neu: Aggregation (täglich, wöchentlich, ...) wird jetzt gespeichert <a href="https://github.com/buchen/portfolio/issues/174">#174</a></li>
+<li>Fix: Notizikone wird in falscher Spalte der Kontenübersicht angezeigt <a href="https://github.com/buchen/portfolio/issues/182">#182</a></li>
+<li>Fix: Browser wird unter Linux nicht geöffnet <a href="https://github.com/buchen/portfolio/issues/179">#179</a></li>
+<li>Fix: Datei wird jetzt nur als geändert markiert wenn sich tatsächlich Kurse geändert haben <a href="https://github.com/buchen/portfolio/issues/144">#144</a></li>
+<li>Fix: Berechnung der Dividendenrendite wenn das Papier in mehrere Porfolio gehalten wird <a href="https://github.com/buchen/portfolio/issues/142">#142</a></li>
+</ul>
+
+<h3>0.14.5 / 21. Oktober 2014</h3>
+
+<ul>
+    <li>Fix: Nach dem letzten Java 8 Update kann eine verschlüsselte Datei nicht mehr geöffnet werden</li>
+</ul>
+
+<h3>0.14.4 / 19. Oktober 2014</h3>
+
+<ul>
+    <li>Fix: Unter Mac OS X Yosemite wird die erste Zeile in Tabellen nicht angezeigt <a href="https://github.com/buchen/portfolio/issues/181">#181</a></li>
+</ul>
+
+<h3>0.14.3 / 3. Oktober 2014</h3>
+
+<ul>
+    <li>Fix: Unvollständige Sortierung in der Vermögensaufstellung deaktiviert <a href="https://github.com/buchen/portfolio/issues/172">#172</a></li>
+    <li>Fix: Linux: Menüs sind nicht deaktivierbar; alternativen Hinweis anzeigen <a href="https://github.com/buchen/portfolio/issues/178">#178</a></li>
+</ul>
+
+<h3>0.14.2 / 2. September 2014</h3>
+
+<ul>
+    <li>Fix: Nächster Versuch Zoom :-) jetzt separat die Zeitachse zoomen/verschieben</li>
+    <li>Fix: Bereich vergrössern mit Ctrl/Command + linke Maustaste</li>
+</ul>
+
+<h3>0.14.1 / 18. August 2014</h3>
+
+<ul>
+    <li>Fix: IllegalArgumentException beim Öffnen der Klassifikationen</li>
+    <li>Fix: Job zur Aktualisierung der Kurse läuft weiter obwohl Datei geschlossen wurde</li>
+    <li>Fix: Wenn mehrere Dateien geändert sind, wird trotz nachfrage nicht gespeichert</li>
+    <li>Fix: Zoom hält X Achse stabil, Tastaturkürzel um zur Orginalgrösse zurück zu kommen</li>
+</ul>
+
+<h3>0.14.0 / 10. August 2014</h3>
+
+<ul>
+    <li>Neu: Aktualisierung der Eclipse Bibliotheken auf die "<a href="http://eclipse.org/luna/">Luna Release</a>"</li>
+    <li>Neu: Mac OS X Anwendung als native Application Bundle</li>
+    <li>Neu: Steuern zu Wertpapierverkäufen erfassen <a href="https://github.com/buchen/portfolio/issues/154">#154</a></li>
+    <li>Neu: Zoomen in den Liniendiagrammen <a href="https://github.com/buchen/portfolio/issues/42">#42</a></li>
+    <li>Fix: Marktwert ist falsch wenn Wertpapier in mehreren Portfolio gehalten wird <a href="https://github.com/buchen/portfolio/issues/160">#160</a></li>
+    <li>Fix: Yahoo Suche liefert kein Ergebnis wenn direkt mit dem Ticker Symbol gesucht wird <a href="https://github.com/buchen/portfolio/issues/157">#157</a></li>
+    <li>Fix: NullPointerException bei "Portfolio löschen" (Kontextmenu) <a href="https://github.com/buchen/portfolio/issues/162">#162</a></li>
+    <li>Fix: Cmd-A und Cmd-S funktionieren nicht (immer) <a href="https://github.com/buchen/portfolio/issues/151">#151</a></li>
+    <li>Fix: Concurrency Fehler beim der Aktualisierung der Kurse</li>
+</ul>
+
+<h3>0.13.2 / 29. Juni 2014</h3>
+
+<ul>
+    <li>Fix: Fehlermeldungen bei der Suche nach Aktualisierungen</li>
+</ul>
+
+<h3>0.13.1 / 29. Juni 2014</h3>
+
+<ul>
+    <li>Verbesserung: Gebühren werden in der Performanceübersicht separat ausgewiesen <a href="https://github.com/buchen/portfolio/issues/149">#149</a></li>
+    <li>Fix: NPE bei der Auswahl der Börsen (Wertpapier editieren) <a href="https://github.com/buchen/portfolio/issues/153">#153</a></li>
+    <li>Fix: Diverse Fehlschreibungen behoben</li>
+</ul>
+
+<h3>0.13.0 / 1. Juni 2014</h3>
+
+<ul>
+    <li>Neu: Verschlüsselung der Datei mit AES, 128 oder 256 Bit</li>
+    <li>Neu: Zusätziche Attribute: Gesamtkostenquote (TER), Fondsgröße</li>
+    <li>Neu: (Fast) alle Eingaben können jetzt direkt in der Zelle editiert werden</li>
+    <li>Neu: 'Investiertes Kapital' und 'Steuern' im Vermögensaufstellung -> Diagramm <a href="https://github.com/buchen/portfolio/issues/146">#146</a></li>
+    <li>Verbesserung: Notizen zu Klassifikationen erfassen</li>
+    <li>Verbesserung: Konten ohne Guthaben werden in der Vermögensaufstellung nicht mehr angezeigt</li>
+    <li>Fix: Werte des Verbraucherpreisindex können manuell hinzu- oder entfernt werden</li>
+    <li>Fix: Datumsangaben beim HTML Download der Kurse im März konnten nicht geparst werden</li>
+</ul>
+
+<h3>0.12.2 / 14. April 2014</h3>
+
+<ul>
+    <li>Fix: Suche nach Wertpapieren liefert wieder Ergebnisse</li>
+    <li>Fix: HTML Import mancher Kurse schlägt fehlt <a href="https://github.com/buchen/portfolio/issues/141">#141</a></li>
+    <li>Fix: HTML Import URL jetzt richtig encodiert</li>
+    <li>Fix: Chart Bibliothek aktualisiert</li>
+</ul>
+
+<h3>0.12.1 / 24. März 2014</h3>
+
+<ul>
+    <li>Fix: Gewichtung wird im Notizfeld editiert (in der Klassifizierung / Asset Allocation)</li>
+</ul>
+
+<h3>0.12.0 / 23. März 2014</h3>
+
+<ul>
+    <li>Neu: Aktiensplits erfassen, Buchungen und Kurse im Split-Verhältnis anpassen <a href="https://github.com/buchen/portfolio/issues/15">#15</a></li>
+    <li>Neu: Export Wertpapier-Buchungen im <a href="http://aktienfreunde.net">aktienfreunde.net</a> Format</li>
+    <li>Verbesserung: 'Alle Wertpapiere' nach Notizen filtern</li>
+    <li>Verbesserung: mehrere Spaltenkonfigurationen speichern (Vermögensaufstellung, Alle Wertpapiere)</li>
+    <li>Fix: Notizen zu Konten in der Vermögensaufstellung anzeigen</li>
+    <li>Fix: Einstandskurs in der Vermögensaufstellung korrekt nach FIFO Prinzip berechnen</li>
+</ul>
+
+<h3>0.11.1 / 24. Februar 2014 (via Online Aktualisierung)</h3>
+
+<ul>
+    <li>Fix: Division durch Null bei der Berechnung des FIFO Einstandwertes</li>
+</ul>
+
+<h3>0.11.0 / 23. Februar 2014</h3>
+
+<ul>
+    <li>Neu: Mehr Kennzahlen in der Wertpapier-Performance Ansicht <a href="https://github.com/buchen/portfolio/issues/122">#122</a></li>
+    <li>Neu: Erfassung von (kurzen) Notizen zu Konten, Portfolios, Wertpapieren und Buchungen <a href="https://github.com/buchen/portfolio/issues/138">#138</a></li>
+    <li>Verbesserung: Eingabe der Stückzahl, auf die sich eine Dividende bezieht</li>
+    <li>Fix: Wenn Kurse aus einer HTML Seite aktualisiert werden, wird jetzt der letzte Kurs korrekt gesetzt</li>
+    <li>Fix: Spaltenbeschriftung in der Tabelle "historische Kurse"</li>
+    <li>Fix: Gebühren sind bei Ein-/Auslieferungen jetzt optional</li>
+</ul>
+
+<h3>0.10.0 / 26. Januar 2014</h3>
+
+<ul>
+    <li>Neu: Kurse automatisch aus HTML Tabellen extrahieren <a href="https://github.com/buchen/portfolio/issues/114">#114</a></li>
+    <li>Neu: Konten als 'inaktiv' markieren und filtern <a href="https://github.com/buchen/portfolio/issues/105">#105</a></li>
+    <li>Verbesserung: Klassifikationen auf eigener Seite editieren <a href="https://github.com/buchen/portfolio/issues/117">#117</a></li>
+    <li>Verbesserung: Salden für Kaufpreis und Gewinn/Verlust in der Vermögensübersicht</li>
+    <li>Verbesserung: Intelligentere Vorbelegung der Konten in den Transaktionsdialogen</li>
+    <li>Fix: Export schlägt fehl bei nicht existierenden (Null) Werten</li>
+</ul>
+
+<h3>0.9.0 / 25. August 2013</h3>
+
+<ul>
+    <li>Neu: Freie und edierbare Klassifizierungen von Wertpapieren</li>
+    <li>Neu: Wertpapiere können mehreren Kategorien zugeordnet werden <a href="https://github.com/buchen/portfolio/issues/16">#16</a></li>
+    <li>Neu: Asset Klassen können editiert werden <a href="https://github.com/buchen/portfolio/issues/48">#48</a></li>
+    <li>Neu: Verlaufsdiagramm einer Kategorie</li>
+    <li>Neu: Vermögensaufstellung nach beliebiger Klassifizierung gruppieren - nicht nur nach Asset Klassen</li>
+    <li>Verbesserung: Konten können Kategorien zugeordnet werden <a href="https://github.com/buchen/portfolio/issues/8">#8</a></li>
+    <li>Verbesserung: Eigene (einfachere) Branchenklassifizierung anlegen <a href="https://github.com/buchen/portfolio/issues/78">#78</a></li>
+    <li>Verbesserung: Auswertung nach Regionen / Ländern <a href="https://github.com/buchen/portfolio/issues/79">#79</a></li>
+    <li>Fix: Export und Import von allen Wertpapierkennnummern: ISIN, WKN und Ticker <a href="https://github.com/buchen/portfolio/issues/103">#103</a></li>
+    <li>Fix: Unterstützung von Proxies mit Authentifizierung <a href="https://github.com/buchen/portfolio/issues/100">#100</a></li>
+    <li>Fix: Verwendung des 'close' und nicht des 'adjusted close' Kurses <a href="https://github.com/buchen/portfolio/issues/64">#64</a></li>
+</ul>
+
+<h3>0.8.0 / 27. Juni 2013</h3>
+
+<ul>
+    <li>Neu: Sparpläne: Wiederkehrende Wertpapierkäufe automatisch generieren</li>
+    <li>Verbesserung: Mehrere Diagrammkonfigurationen speichern</li>
+    <li>Verbesserung: Wertpapiere als Benchmark oder als Performancelinie dem Diagramm hinzufügen <a href="https://github.com/buchen/portfolio/issues/85">#85</a></li>
+    <li>Verbesserung: Depot und Verrechnungskonto werden bei Buchungen angezeigt <a href="https://github.com/buchen/portfolio/issues/81">#81</a></li>
+    <li>Verbesserung: Gekaufte/Verkaufte Stücke werden auch in den Kauf-/Verkaufsbuchungen des Kontos angezeigt <a href="https://github.com/buchen/portfolio/issues/83">#83</a></li>
+    <li>Fix: IZF in der Performance-Berechnung gleicht nicht mehr an Berichtszeiträume ungleich 1 Jahr an <a href="https://github.com/buchen/portfolio/issues/80">#80</a></li>
+</ul>
+
+<h3>0.7.12 / 20. Mai 2013</h3>
+
+<ul>
+    <li>Fix: Diagramm Konfiguration auch speichern wenn nur Farbe oder Stil sich geändert hat</li>
+</ul>
+
+<h3>0.7.11 / 20. Mai 2013</h3>
+
+<ul>
+    <li>Wizard um neue XML Dateien anzulegen</li>
+    <li>Neue Vergleichswerte unter Performance -> Diagramm: einzelne Konten, Depots, Kategorien, Asset Klassen</li>
+    <li>Frei konfigurierbare Farben in den Liniendiagrammen unter Performance und Vermögensaufstellung <a href="https://github.com/buchen/portfolio/issues/33">#33</a></li>
+    <li>Gruppierung der Erträge nach Konten (Reiter unter Performance) <a href="https://github.com/buchen/portfolio/issues/76">#76</a></li>
+    <li>Datum des letzten (historischen) Kurses als Spalte in der Wertpapierliste wählbar</li>
+    <li>Diagramm Konfiguration wird jetzt in der XML Datei gespeichert</li>
+    <li>Sortierreihenfolge in den Konten / Depots wird gespeichert</li>
+    <li>Ansicht: Grösse der Kontenliste und Buchungen bleiben im Verhältnis erhalten <a href="https://github.com/buchen/portfolio/issues/75">#75</a></li>
+</ul>
+
+<h3>0.7.10 / 21. April 2013</h3>
+
+<ul>
+    <li>Neue Vergleichswerte unter Vermögensaufstellung -> Diagramm: einzelne Konten, Depots, Kategorien oder Wertpapiere</li>
+    <li>Verbesserung: Anordnung der Spalten unter Stammdaten -> Portfolios -> Umsätze</li>
+    <li>Fix: Performance-Berechnung am ersten Tag des Mittelzuflusses <a href="https://github.com/buchen/portfolio/issues/62">#62</a></li>
+    <li>Fix: Kauf/Verkaufsinformationen im Wertpapierdiagramm werden unleserlich übereinander gezeichnet <a href="https://github.com/buchen/portfolio/issues/63">#63</a></li>
+</ul>
+
+<h3>0.7.9 / 19. März 2013</h3>
+
+<ul>
+    <li>Fix: Korrekte Verarbeitung von Kauf/Verkauf Buchungen ohne Wertpapiere auf Konten <a href="https://github.com/buchen/portfolio/issues/58">#58</a></li>
+</ul>
+
+<h3>0.7.8 / 17. März 2013</h3>
+
+<ul>
+    <li>Fix: Fehlermeldung beim Laden des XML: Cannot construct ... as it does not have a no-args constructor <a href="https://github.com/buchen/portfolio/issues/58">#58</a></li>
+    <li>Dialog zur Konsistenzprüfung ist jetzt nicht modal und somit lassen sich die Transaktionen besser prüfen</li>
+</ul>
+
+<h3>0.7.7 / 17. März 2013</h3>
+
+<ul>
+    <li>Fix: Gegenbuchungen (z.B. Kauf/Verkauf) werden jetzt konsistent aktualisiert, egal wo sie editiert werden <a href="https://github.com/buchen/portfolio/issues/22">#22</a></li>
+    <li>Konsistenzprüfung der Datei nach dem Laden und nach einem Import</li>
+    <li>Kurs und Stücke in der Wertpapier-Performance Ansicht <a href="https://github.com/buchen/portfolio/issues/49">#49</a></li>
+    <li>Kontektmenü zum Anlegen von Transaktionen ist an mehr Stellen verfügbar</li>
+    <li>Bug: Diagramme beginnen um 1970 wenn keine Wertpapierkurse vorliegen <a href="https://github.com/buchen/portfolio/issues/52">#52</a></li>
+    <li>Bug: Tooltips zeigen nicht für alle Datumswerte Zahlen an <a href="https://github.com/buchen/portfolio/issues/51">#51</a></li>
+</ul>
+
+<h3>0.7.6 / 24. Februar 2013</h3>
+
+<ul>
+    <li>Flexible Berichtszeiträume <a href="https://github.com/buchen/portfolio/issues/21">#21</a></li>
+    <li>Verbesserte Performance-Berechnung (siehe <a href="new_and_noteworthy.html">Neu & Beachtenswert</a>)</li>
+    <li>Bug: 'Willkommen Fenster' schließt nicht wenn eine Datei über das Menü geöffnet wird</li>
+</ul>
+
+<h3>0.7.5 / 3. Februar 2013</h3>
+
+<ul>
+    <li>Markiere Wertpapiere als 'inaktiv' damit sie in den Kaufdialogen nicht mehr auftauchen (z.B. getilgte Anleihen) <a href="https://github.com/buchen/portfolio/issues/44">#44</a></li>
+    <li>Exportiere alle Wertpapierkurse in eine Datei mit 'Exportieren...' -> 'Wertpapiere' -> 'Alle historischen Kurse'</li>
+    <li>Visiere mit gedrückter Maustaste die genauen Datenpunkte in den Diagrammen an <a href="https://github.com/buchen/portfolio/issues/40">#40</a></li>
+</ul>
+
+<h3>0.7.4 / 5. Januar 2013</h3>
+
+<ul>
+    <li>Kontextinformationen in den Diagrammen zum anvisierten Punkt <a href="https://github.com/buchen/portfolio/issues/39">#39</a></li>
+    <li>Aufstellung der Erträge in der Performanceübersicht</li>
+    <li>Import: Identifikation eines Wertpapiers nicht nur anhand von ISIN, sondern auch anhand der WKN und dem Ticker Symbol</li>
+    <li>Bug: Wenn Yahoo keine Börsenplätze findet, sollte trotzdem das aktuelle Ticker Symbol für die Online Aktualisierung genutzt werden können <a href="https://github.com/buchen/portfolio/issues/29">#29</a></li>  
+    <li>Bug: Import/Export/Online Menüs deaktivieren wenn keine Datei geöffnet ist</li>
+    <li>Bug: Kontextmenüs zum Kauf/Verkauf deaktivieren wenn (noch) keine Wertpapiere/Portfolio existieren</li>
+</ul>
+
+<h3>0.7.3 / 6. Dezember 2012 (via Online Aktualisierung)</h3>
+
+<ul>
+    <li>Fehler bei der Berechnung des IZF bei langen Zeiträumen (mehr Iterationen notwendig)</li>
+</ul>
+
+<h3>0.7.2 / 2. Dezember 2012 (via Online Aktualisierung)</h3>
+
+<ul>
+    <li>Neue Portfolio Transaktionen: Einlieferung / Auslieferung und Umbuchung (Eingang / Ausgang) <a href="https://github.com/buchen/portfolio/issues/30">#30</a></li>
+    <li>Diverse Fehlerbehebungen <a href="https://github.com/buchen/portfolio/issues/34">#34</a> <a href="https://github.com/buchen/portfolio/issues/28">#28</a></li>
+</ul>
+
+<h3>0.7.1 / 25. November 2012 (via Online Aktualisierung)</h3>
+
+<ul>
+    <li>Neues Feld bei Wertpapieren: WKN <a href="https://github.com/buchen/portfolio/issues/25">#25</a></li>
+    <li>Nicht verwendete Asset Klassen werden in der Vermögensübersicht und im Diagramm nicht mehr dargestellt <a href="https://github.com/buchen/portfolio/issues/28">#28</a></li>
+    <li>Benutzerspezifisches Spaltenlayout weiterer Tabellen wird gespeichert: Konten, Portfolio, historische Kurse</li>
+</ul>
+
+<h3>0.7.0 / 11. November 2012</h3>
+<ul>
+    <li>Branchenklassifizierung</li>
+    <li>Performance Chart: Vergleich mit einem anderen Papier (oder Index)</li>
+    <li>Neue Beispieldatei mit einem DAX Investment und Branchen</li>
+    <li>Mehr Exportmöglichkeiten, z.B. Export der Datenbasis von den Diagrammen</li>
+    <li>Unterstützung des MacBook Retina</li>
+</ul>
+
+<h3>0.6.5 / 26. September 2012 (via Online Aktualisierung)</h3>
+<ul>
+    <li>Bug: Import von Wertpapiertransaktionen importiert Stückzahl nicht korrekt</li>
+</ul>
+
+<h3>0.6.4 / 19. August 2012</h3>
+<ul>
+	<li>Fehlerbehebung: Aktuelle Yahoo Kurse wurden unter bestimmten Bedingungen falschen Wertpapieren zugeordnet</li>
+	<li>Öffnen im Browser: Yahoo, OnVista, und Finanzen.net Seiten des Wertpapieres direkt aufrufen</li>
+</ul>
+
+<h3>0.6.3 / 12. August 2012</h3>
+<ul>
+	<li>Verbesserungen in Dialogen: Eingabefelder sind zur schnelleren Eingabe selektiert; überflüssige Meldungen entfernt <a href="https://github.com/buchen/portfolio/issues/17">#17</a></li>
+	<li>Beim Löschen von Kauf/Verkauf Transaktionen wird die Gegenbuchung im Konto/Portfolio ebenfalls gelöscht <a href="https://github.com/buchen/portfolio/issues/18">#18</a></li>
+</ul>
+
+<h3>0.6.2 / 22. Juli 2012 (via Online Aktualisierung)</h3>
+<ul>
+	<li>Bug: Aktualisierung der Verbraucherpreise schlägt fehl</li>
+</ul>
+
+<h3>0.6.1 / 14. Juli 2012</h3>
+<ul>
+	<li>Mehr Spalten in der Vermögensaufstellung: IZF (interne Zinsfuß) Performance, absolutes Delta inklusive Dividendenzahlungen</li>
+	<li>Export der Vermögensaufstellung</li>
+	<li>Export und Import der Wertpapierstammdaten</li>
+	<li>Aktualisierung des Programms aus dem Internet</li>
+	<li>Optionale Spalten beim CSV Import: nicht mehr alle Felder sind Pflichtfelder</li>
+	<li>Verbessertes Rendering der Charts</li>
+</ul>
+
+<h3>0.6.0 / 17. Juni 2012</h3>
+<ul>
+	<li>Watchlisten: bessere Übersicht über die Wertpapiere</li>
+	<li>Suche in Wertpapieren</li>
+	<li>Konfigurierbare Spalten in der Vermögensübersicht: ISIN, Einstandspreis, Einstandswert und Gewinn/Verlust</li>
+	<li>Beispieldatei 'kommer.xml' aktualisiert</li>
+	<li>Navigationsleiste verbessert</li>
+</ul>
+
+<h3>0.5.4 / 20. Mai 2012</h3>
+<ul>
+	<li>CSV Import von Umsätze und Kursen (Menü "File" -> "Importieren...")</li>
+	<li>Bruchteile bei Wertpapieranteilen (5 Nachkommastellen) <a href="https://github.com/buchen/portfolio/issues/4">#4</a></li>
+	<li>Bug: Navigation per Tab ein einer Eingabezeile <a href="https://github.com/buchen/portfolio/issues/12">#12</a></li>
+	<li>Bug: Tastaturkürzel für Speichern/Speichern Unter <a href="https://github.com/buchen/portfolio/issues/11">#11</a></li>
+</ul>
+
+<h3>0.5.3 / 6. Mai 2012</h3>
+<ul>
+	<li>CSV Export von Umsätze und Kursen (Menü "File" -> "Exportieren...")</li>
+	<li>CSV Export auch per Kommandozeile (siehe <a href="https://github.com/buchen/portfolio/wiki">Wiki</a>)</li>
+	<li>Prüfung der ISIN bei Eingabe</li>
+	<li>Icons für Wertpapiere, Konten und Depots</li>
+	<li>Bug: Vermögensaufstellung flackert bei Kursaktualisierung</li>
+</ul>
+
+<h3>0.5.2 / 2. Mai 2012</h3>
+<ul>
+	<li>Verbesserter Dialog um Yahoo Kursinformationen zu konfigurieren (inklusive Auswahl der Börsenplätze)</li>
+	<li>Unterstützung für den manuellen Import von historischen Kursen von Onvista und Finanzen.net</li>
+</ul>
+
+<h3>0.5.1 / 2. April 2012</h3>
+<ul>
+	<li>Legende zu Liniendiagrammen hinzugefügt</li>
+	<li>STOCK -> EQUITY und BOND -> DEBT umbenannt <a href="https://github.com/buchen/portfolio/issues/5">#5</a></li>
+	<li>Menüeinträge 'Speichern' und 'Speichern unter' hinzugefügt <a href="https://github.com/buchen/portfolio/issues/2">#2</a></li>
+	<li>Bug: Exception 'no-args constructor' unter Java 7 <a href="https://github.com/buchen/portfolio/issues/1">#1</a></li>
+	<li>Bug: Kursinformationen unter Win7 nicht vollständig sichtbar <a href="https://github.com/buchen/portfolio/issues/3">#3</a></li>
+</ul>
+
+<h3>0.5.0 / 31. März 2012</h3>
+Initiale Version
+</div>
+
+<h2>Lizenz</h2>
+<p><em>Portfolio Performance</em> ist Open Source Software: <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License - v1.0</a></p>
+
+</div>
+</body>
+</html>
