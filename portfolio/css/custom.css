@@ -3,6 +3,10 @@ a, a:hover {
 	color: #95A5B4;
 }
 
+.logo {
+	padding: 10px;
+}
+
 /* header */
 nav.primary {
 	color: #95A5B4;
