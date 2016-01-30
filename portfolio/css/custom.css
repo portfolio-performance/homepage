@@ -1,0 +1,216 @@
+/* common styles */
+a, a:hover {
+	color: #95A5B4;
+}
+
+/* header */
+nav.primary {
+	color: #95A5B4;
+}
+
+nav.primary ul,
+nav.primary ul li {
+	margin: 0px;
+}
+
+nav.primary ul li {
+	display: inline;
+	float: right;
+	position: relative;
+}
+
+nav.primary ul li a {
+	display: inline-block;
+	line-height: 42px;
+	padding:  0 7px;
+	color: #95A5B4;
+	text-decoration: none;
+}
+
+nav.primary ul li a:hover {
+	color: black;
+	cursor: pointer;
+}
+
+/* banner */
+.banner {
+	background-image: linear-gradient(to bottom, rgb(149,165,180) 0%, rgb(137,154,172) 100%);
+	background-color: #95A5B4;
+	color: white;
+	text-align: center;
+}
+
+.banner img {
+	width: 256px;
+	max-width: 100%;
+}
+
+/* download buttons */
+
+.banner .teaser {
+	margin-top: 2.5rem;
+}
+
+.banner a {
+	color: white;
+}
+
+.banner .version {
+	margin-bottom: 0.5rem;
+}
+
+span.dropt {
+	position: relative;
+	cursor: pointer;
+}
+
+span.dropt span {
+	position: absolute;
+	background-color: #95A5B4;
+  	border: 1px solid white;
+  	border-radius: 10px;
+  	padding: 5px;
+  	z-index: 6;
+
+  	font-size: 90%;
+  	text-align: left;
+
+  	left: -20%;
+  	right: -20%;
+  	top: 170%;
+  	min-width: 250px;
+
+  	visibility: hidden;
+  	opacity: 0; 
+}
+
+span.dropt:hover span {
+	visibility: visible;
+	opacity: 1; 
+
+  	-webkit-transition: opacity 0.4s ease-out;
+	-moz-transition: opacity 0.4s ease-out;
+	-o-transition: opacity 0.4s ease-out;
+	-ms-transition: opacity 0.4s ease-out;
+	transition: opacity 0.4s ease-out;
+}
+
+.banner .downloads p {
+	margin-bottom: 1rem;
+}
+
+.banner .downloads .win,
+.banner .downloads .macosx,
+.banner .downloads .linux {
+	background-repeat: no-repeat;
+	background-size: 32px;
+	background-position: 9px 3px;
+	background-color: #AFBFCE;
+
+	display: inline-block;
+  	height: 38px;
+  	line-height: 38px;
+  	margin-bottom: 10px;
+  	padding: 0px 10px 0px 50px;
+	border-radius: 4px;
+	text-decoration: none;
+
+	-webkit-transition: background 0.4s ease-out;
+	-moz-transition: background 0.4s ease-out;
+	-o-transition: background 0.4s ease-out;
+	-ms-transition: background 0.4s ease-out;
+	transition: background 0.4s ease-out;
+}
+
+.banner .downloads .win {
+	background-image: url("../images/download-windows.png");
+}
+
+.banner .downloads .macosx {
+	background-image: url("../images/download-macosx.png");
+}
+
+.banner .downloads .linux {
+	background-image: url("../images/download-linux.png");
+}
+
+.banner .downloads a:hover {
+	background-color: #A0AEBC;
+}
+
+/* features */
+
+.features {
+	margin-top: 1.5rem;
+}
+
+/* screenshots */
+
+.screenshots {
+	text-align: center;
+}
+
+.screenshots a img {
+	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);	
+}
+
+.screenshots figure {
+	display: inline-block;
+	margin: 5px;
+}
+
+/* misc */
+.misc {
+	text-align: center;
+}
+
+.misc h5 {
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.misc a {
+  background: url(../images/arrow.png) no-repeat 6px center;
+  background-size: 12px;
+  padding-left: 20px;
+}
+
+/* footer */
+footer {
+	margin-top: 5rem;
+	background-color: #95A5B4;
+	color: white;
+	font-size: 70%;
+	text-align: center;
+}
+
+footer a,
+footer a:hover {
+	color: white;
+}
+
+/* noteworthy */
+
+.noteworthy h5 {
+	font-weight: bold;
+	margin-top: 30px; 
+}
+
+.noteworthy .title {
+	font-weight: bold;
+}
+
+.noteworthy .news td {
+	vertical-align: top;
+	padding-bottom: 10px;
+}
+
+.noteworthy img {
+	max-width: 100%;
+}
+
+.noteworthy li {
+	margin-bottom: 0rem;
+}
