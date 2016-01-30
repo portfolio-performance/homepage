@@ -177,6 +177,11 @@ span.dropt:hover span {
   padding-left: 20px;
 }
 
+.screencast {
+	overflow: auto;
+	-webkit-overflow-scrolling:touch;
+}
+
 /* footer */
 footer {
 	margin-top: 5rem;
