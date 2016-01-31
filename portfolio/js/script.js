@@ -20,13 +20,15 @@ ga('send', 'pageview');
                 $pic.find('a').each(function() {
                     var $href   = $(this).attr('href'),
                         $size   = $(this).data('size').split('x'),
+                        $title  = $(this)[0].children[0].alt,
                         $width  = $size[0],
                         $height = $size[1];
 
                     var item = {
                         src : $href,
                         w   : $width,
-                        h   : $height
+                        h   : $height,
+                        title : $title
                     }
 
                     items.push(item);
