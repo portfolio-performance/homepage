@@ -195,10 +195,12 @@ span.dropt:hover span {
 }
 
 /* misc */
+.partner,
 .misc {
 	text-align: center;
 }
 
+.partner h5,
 .misc h5 {
 	margin-top: 2.5rem;
 	margin-bottom: 1rem;
