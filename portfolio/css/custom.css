@@ -72,7 +72,8 @@ nav.primary ul li a.download:hover {
 	margin-bottom: 0.5rem;
 }
 
-.banner .version a.highlight {
+.banner .version a.highlight,
+.banner .version a.help {
 	color: white;
     background-color: #f18f01;
 	display: inline-block;
@@ -89,43 +90,15 @@ nav.primary ul li a.download:hover {
 	background-repeat: no-repeat;
 	background-size: 32px;
 	background-position: 9px 3px;
+	
+}
+
+.banner .version a.highlight {
 	background-image: url("../images/forum.png");
 }
 
-span.dropt {
-	position: relative;
-	cursor: pointer;
-}
-
-span.dropt span {
-	position: absolute;
-	background-color: #95A5B4;
-  	border: 1px solid white;
-  	border-radius: 10px;
-  	padding: 5px;
-  	z-index: 6;
-
-  	font-size: 90%;
-  	text-align: left;
-
-  	left: -20%;
-  	right: -20%;
-  	top: 170%;
-  	min-width: 250px;
-
-  	visibility: hidden;
-  	opacity: 0; 
-}
-
-span.dropt:hover span {
-	visibility: visible;
-	opacity: 1; 
-
-  	-webkit-transition: opacity 0.4s ease-out;
-	-moz-transition: opacity 0.4s ease-out;
-	-o-transition: opacity 0.4s ease-out;
-	-ms-transition: opacity 0.4s ease-out;
-	transition: opacity 0.4s ease-out;
+.banner .version a.help {
+	background-image: url("../images/book.png");
 }
 
 .banner .downloads p {
@@ -175,12 +148,15 @@ span.dropt:hover span {
 
 .features {
 	margin-top: 1.5rem;
+	padding-top: 10px;
+	background-color: #f1f1f1;
 }
 
 /* screenshots */
 
 .screenshots {
 	text-align: center;
+	padding-top: 10px;
 }
 
 .screenshots a img {
@@ -195,13 +171,24 @@ span.dropt:hover span {
 }
 
 /* misc */
+
+.screencast {
+	background-color: #f1f1f1;
+	overflow: auto;
+	-webkit-overflow-scrolling:touch;
+	padding-bottom: 10px;
+}
+
 .partner,
-.misc {
+.misc,
+.screencast {
 	text-align: center;
+	padding-top: 10px;
 }
 
 .partner h5,
-.misc h5 {
+.misc h5,
+.screencast h5 {
 	margin-top: 2.5rem;
 	margin-bottom: 1rem;
 }
@@ -210,11 +197,6 @@ span.dropt:hover span {
   background: url(../images/arrow.png) no-repeat 6px center;
   background-size: 12px;
   padding-left: 20px;
-}
-
-.screencast {
-	overflow: auto;
-	-webkit-overflow-scrolling:touch;
 }
 
 /* footer */
