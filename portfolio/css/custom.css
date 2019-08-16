@@ -10,6 +10,7 @@ a, a:hover {
 /* header */
 nav.primary {
 	color: #95A5B4;
+	text-align: right;
 }
 
 nav.primary ul,
@@ -19,7 +20,6 @@ nav.primary ul li {
 
 nav.primary ul li {
 	display: inline;
-	float: right;
 	position: relative;
 }
 
@@ -54,7 +54,7 @@ nav.primary ul li a.download:hover {
 }
 
 .banner img {
-	width: 256px;
+	width: 200px;
 	max-width: 100%;
 }
 
@@ -90,7 +90,6 @@ nav.primary ul li a.download:hover {
 	background-repeat: no-repeat;
 	background-size: 32px;
 	background-position: 9px 3px;
-	
 }
 
 .banner .version a.highlight {
