@@ -45,6 +45,14 @@ nav.primary ul li a.download:hover {
 	color: #eeeeee;
 }
 
+.language {
+	font-weight: bold;
+	color: #95A5B4;
+	border:1px solid #95A5B4;
+	border-radius: 1rem;
+	padding: 0.5rem;
+}
+
 /* banner */
 .banner {
 	background-image: linear-gradient(to bottom, rgb(149,165,180) 0%, rgb(137,154,172) 100%);

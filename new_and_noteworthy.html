@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio Performance - Neues &amp; Nennenswertes</title>
+  <meta name="description" content="Übersicht über die neuesten Funktionen im Open Source Programm Portfolio Performance">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+
+  <header>
+  <div class="band navigation">
+    <nav class="primary container">
+      <div class="row">
+        <div class="one-half column">
+          <h3>Neues & Nennenswertes</h3>
+        </div>
+        <div class="one-half column">
+          <ul>
+            <li><a href="https://forum.portfolio-performance.info">Forum</a></li>
+            <li><a href="https://github.com/buchen/portfolio">Source</a></li>
+            <li><a href="/" class="download">Download</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- end nav -->
+  </div> <!-- end band -->
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="two columns">
+          <a href="/"><img class="logo" src="images/logo.svg"/></a>
+        </div>
+        <div class="ten columns teaser">
+          <p>Hier eine Liste mit den größeren und nennenswerten Neuerungen in <a href="/">Portfolio Performance</a>.</p>
+          <p>Es gibt auch eine Liste aller <a href="versions.html">vorherigen Aktualisierungen</a>.</p>
+        </div>
+      </div>
+    </div> <!-- end container -->
+  </section> <!-- end section -->
+
+  <section class="noteworthy">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+
+          <h5>Letzte Änderungen</h5>
+
+          <strong>Neues und Nennenswertes findet sich seit Version 0.24.0 im <a href="https://forum.portfolio-performance.info/t/neues-nennenswertes/23/last">Forum</a>!</strong>
+
+        </div>
+
+        <div class="twelve columns">
+
+          <h5><a name='0.23.0'>Version 0.23.0 (24. April 2016)</a></h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+            <td class="title">Kontosaldenverlauf</td>
+            <td class="content"><p>Zu einem Konto gibt es jetzt den Kontosaldenverlauf als Chart.</p>
+            <p><img src="images/nn_account_balance.png" alt="Kontosaldenverlauf" width="582"/></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="title">Benutzte Dokumente</td>
+            <td class="content"><p>Im Datei-Menü können die zuletzt benutzte Dokumente direkt geöffnet werden.</p>
+            <p><img src="images/nn_recently_used_files.png" alt="Zuletzt benutzte Dateien" width="532"/></p>
+            </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- twelve columns -->
+
+        <div class="twelve columns">
+
+          <h5><a name='0.22.0'>Version 0.22.0 (26. Februar 2016)</a></h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+            <td class="title">Dividenden</td>
+            <td class="content"><p>Mit dem neuen Menüeintrag "Dividenden" in der Seitennavigation kann man sich die Dividenden der vergangenen Jahre pro Monat oder akkumuliert anzeigen lassen.</p>
+            <p><img src="images/nn_dividends_per_month.png" alt="Dividenden pro Monat" width="744"/></p>
+            <p><img src="images/nn_dividends_accumulated.png" alt="Dividenden akkumuliert pro Jahr" width="744"/></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="title">Kursänderungen</td>
+            <td class="content"><p>Neue Spalten in der Wertpapier-Liste: Kursänderung eines Wertpapier in einem beliebigen Zeitraum.</p>
+            <p><img src="images/nn_quote_changes.png" alt="Spalte mit Kursänderunge hinzufügen" width="678"/></p>
+            </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- twelve columns -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.21.1 (10. Januar 2016)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Währungen</td>
+          <td class="content">Konten und Wertpapiere können nun mit einer Währung versehen werden. Die historischen Wechselkurse werden automatisch von der <a href="https://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html">Europäischen Zentralbank</a> geladen.
+          <p><img src="images/nn_currencies.png" alt="Währungen in der Vermögensaufstellung" width="533"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Klassifizierungen klonen</td>
+          <td class="content">Über das Kontextmenü können Klassifizierungen jetzt einfach kopiert werden. So kann man z.B. eine neue Asset Allocation ausprobieren ohne die alte direkt zu verlieren. Zusätzlich können die Einträge in der Seitennavigation nun nach oben bzw. nach unten verschoben werden.
+          <p><img src="images/nn_classification_copy.png" alt="Klassifizierungen klonen" width="365"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Mehr Performance Kennzahlen</td>
+          <td class="content">In der Vermögensaufstellung (die, so nebenbei, jetzt auch sortiert werden kann) gibt es weitere Performance-Kennzahlen. Der Tooltip am Spaltenkopf enthält ggf. mehr Informationen zu Berechnung.
+          <p><img src="images/nn_performance_columns.png" alt="Weitere Spalten mit Performance-Kennzahlen" width="531"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Proxy Server</td>
+          <td class="content">In den Einstellungen kann man nun den Proxy Server direkt konfigurieren. Und die Konfiguration wird nun auch für die Online Aktualisierung herangezogen.
+          <p><img src="images/nn_proxy_config.png" alt="Proxy Server konfigurieren" width="471"/></p>
+          </td>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.20.0 (20. September 2015)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Freie Attribute</td>
+          <td class="content">Über die "Einstellungen" -> "Attribute" können jetzt frei Attribute definiert werden, für die man dann zu jedem Wertpapier Wert erfassen kann. Zum Beispiel könnte man ein Feld "Stop-Loss-Kurs" definieren um diese Information übersichtlich aufzubereiten. Die Attribute können in vielen Ansichten eingeblendet und auch direkt editiert werden.ne
+
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.19.0 (27. Juni 2015)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Bookmarks verwalten</td>
+          <td class="content">Über das Kontextmenü 'Wertpapier' -> 'Im Browser öffnen' konnte man schon immer passende Webseiten öffnen. Diese Bookmarks sind jetzt editierbar. Als Platzhalter stehen {isin}, {wkn}, {tickerSymbol} und {name} zur Verfügung. Die Bookmarks werden im XML gespeichert.
+          <p><img src="images/nn_bookmarks.png" alt="Bookmarks verwalten" width="542"/>
+          <p>Vielen Dank an <a href="https://github.com/alani1">alani</a> für die Contribution!</p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Interactive Brokers</td>
+          <td class="content">Über 'Datei' -> 'Importieren...' -> 'Interactive Brokers Activity Statement' kann man Buchungen aus dem Activity Statement importieren. Wiederum vielen Dank an <a href="https://github.com/alani1">alani</a> für die Contribution! 
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.18.0 (31. Mai 2015)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Verbesserte Diagramme</td>
+          <td class="content">Für die Klassifikationen gibt es jetzt ein Flare-Chart. Auch das Kuchendiagramm für die Bestände ist jetzt besser und hat unter anderen Tooltips.
+          <p><img src="images/nn_flare_chart.png" alt="Flare-Chart für die Klassifikationen" width="542"/>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">PDF Import</td>
+          <td class="content">Keine Lust Buchungen manuell einzugeben? Mittlerweile kann man Kauf-/Verkauf- und Dividendenbuchungen aus den PDF Dokumenten verschiedener Banken einlesen. Aktuell werden comdirect, Consorsbank, DAB Bank, Deutschen Bank und Flatex unterstützt. Da sich das Format dieser Dokumente immer wieder mal ändert, kann man über "Datei" -> "Importieren" -> "Debug: Text aus PDF extrahieren..." eine Textversion erstellen mit der wir den Import weiter verbessern können.
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.17.0 (22. Februar 2015)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Historische Performance und Volatilität</td>
+          <td class="content">Mit diesem Diagramm kann man jetzt die historische Performance (TTWROR) mit der Volatilität in Beziehung setzen.
+          <p>Die Volatilität wird aus den täglichen Veränderungen der Position errechnet. In dem Berichtszeitraum werden alle Werte genommen, die nicht auf ein Wochenende oder einen Feiertag fallen (Weihnachten, Ostern, 1. Mai, Neujahr). Mit Hilfe des Exports (oben rechts) kann man sich die Basisdaten als CSV Datei speichern und so die Rechnung mit Excel und der STABWN Formel nachvollziehen. Die ganze Berechnung steht und fällt natürlich mit den historischen Kursen - da braucht es eine sehr gute Basis!</p>
+          <p><img src="images/nn_returns_volatility.png" alt="Diagramm Historische Performance und Volatilität" width="493"/></p></td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.16.0 (8. Februar 2015)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Risikokennzahlen</td>
+          <td class="content">Performance ist die eine Seite der Medaille, Risiko die andere. Mit dieser Version werden zwei Risikokennzahlen für das Gesamtportfolio berechnet: Maximum Drawdown und Volatilität.
+          <p>Der <strong>Maximum Drawdown</strong> stellt den maximalen kumulierten Verlust innerhalb der betrachteten Periode dar.</p>
+          <p>Die <strong>Volatilität</strong> gibt an, wie stark ein Kurs schwankt. Je höher die Volatilität ist, desto stärkere Schwankungen müssen eingeplant werden, sowohl nach Oben als auch nach Unten.</p>
+          <p><img src="images/nn_risk_metrics.png" alt="Risikokennzahlen Maximum Drawdown und Volatilität" width="542"/></p></td>
+          </tr>
+          <tr>
+          <td class="title">Diagramme</td>
+          <td class="content">In den Diagrammen zu Klassifizierungen kann man nun die nicht-klassifizierten Wertpapiere ausblenden. Zusätzlich kann man beim Stapeldiagramm die Wertpapiere statt nach Grösse nach ihrer Reihenfolge in der Klassifizierung sortieren.
+          <p><img src="images/nn_ignore_wo_classification.png" alt="Klassifizierungen ohne nicht-klassifizierte Wertpapiere" width="462"/></p></td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.15.0 (30. November 2014)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Kurse</td>
+          <td class="content">Mit dieser Version kann man unterschiedliche Kurslieferanten für historische und aktuelle Kurse konfigurieren. So kann man zum Beispiel die historischen Kurse aus einer Webseite laden, aber Yahoo Finance für den aktuellen Kurs verwenden.
+          <p><img src="images/nn_latest_quote_provider.png" alt="Kurslieferant für aktuelle Kurse konfigurieren" width="542"/></p></td>
+          </tr>
+          <tr>
+          <td class="title">Steuerrückerstattung</td>
+          <td class="content">Steuern konnte man schon immer erfassen. Jetzt kann man auch eine mögliche Rückerstattung erfassen. Eine Steuerrückerstattung kann, muss sich aber nicht auf ein Wertpapier beziehen.
+          </td>
+          <tr>
+          <td class="title">Startseite festlegen</td>
+          <td class="content">Nach dem Öffnen lieber direkt in die Performance-Übersicht? Kein Problem! Mit einem Rechtsklick in die Seitenleiste kann man jede Seite als Startseite festlegen.
+          <p><img src="images/nn_start_page.png" alt="Startseite festlegen" width="542"/></p></td>
+          </td>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.14.0 (10. August 2014)</h5>
+
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Zoom</td>
+          <td class="content">Jetzt kann man (endlich!) in die Liniendiagramme zoomen. Und so geht es:
+          <ul>
+            <li><strong>Vergrössern</strong>: <em>Steuerung - Pfeiltaste hoch</em></li>
+            <li><strong>Verkleinern</strong>: <em>Steuerung - Pfeiltaste runter</em></li>
+            <li><strong>Verschieben</strong>: <em>Pfeiltasten</em> hoch und runter</li>
+            <li><strong>Originalgrösse</strong>: via Kontektmenu</li>
+          </ul>
+          <p>Die dem Diagramm zugrunde liegenden Zahlenwerte erhält man weiterhin mit der gedrückten <em>linken</em> Maustaste.</p>
+          <p><img src="images/nn_zoom.png" alt="Zoomen in Liniendiagrammen" width="340"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Steuern für Wertpapierverkäufe</td>
+          <td class="content">Steuern, die bei einem Verkauf eines Wertpapieres anfallen, können jetzt direkt in der Buchung erfasst werden. Die Steuern werden separat in der Performance-Übersicht aufgeführt, können per CSV exportiert und importiert werden, und werden auch im Diagramm angezeigt.
+          </td>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.13.0 (1. Juni 2014)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">AES Verschlüsselung</td>
+          <td class="content">Die Portfolio Datei kann jetzt optional auch verschlüsselt werden. Zur Verfügung steht AES mit 128 oder 256 Bit Schlüssellänge. Auf Grund von Import-/Export Restriktionen muss die Java Laufzeitumgebung eventuell erst noch für AES-256 vorbereitet werden. Mehr Details dazu wenn man "Speichern als" -> "AES-256 verschlüsselt" wählt.
+          <p><img src="images/nn_encrypt.png" alt="Portfolio Datei verschlüsseln" width="542"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Investiertes Kapital</td>
+          <td class="content">Im Diagramm der Vermögensaufstellung gibt es jetzt drei neue Werte: Investiertes Kapital (auf den Berichtszeitraum bezogen), das Delta - also die Differenz zwischen dem aktuellen Gesamtwert und dem investierten Kapital - sowie die akkumulierten Steuern.
+          <p><img src="images/nn_invested_capital.png" alt="Investiertes Kapital als neue Datenreihe" width="542"/></p>
+          </td>
+          <tr>
+          <td class="title">Weitere Attribute</td>
+          <td class="content">Zu Wertpapieren können jetzt drei weitere Attribute erfasst werden: Gesamtkostenquote (TER), Fondsgröße und Anbieter. Diese Attribute können selbstverständlich in allen Tabelle hinzugefügt werden. So kann man recht einfach eine Asset Allocation anlegen und beim Rebalancing TER im Blick halten.
+          <p><img src="images/nn_additional_attributes.png" alt="Zusätzliche Attribute" width="463"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Zellen direkt editieren</td>
+          <td class="content">Per Doppelklick in die Zelle kann man jetzt (fast) alle Werte direkt editieren. Per Tab springt man in die nächste Zelle. Auf diese Weise kann man zum Beispiel recht schnell alle TER Werte für Wertpapiere erfassen.
+          <p><img src="images/nn_in_place_editing.png" alt="Wertpapiernamen direkt in der Zelle editieren" width="363"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.12.0 (23. März 2014)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Aktiensplits einpflegen</td>
+          <td class="content">Mit dem neuen Wizards kann man nur Aktiensplits einpflegen. Dabei werden dann (optional) alle Buchungen angepasst, also Kauf-/Verkaufbuchungen als auch Dividendenbuchungen (Stücke auf die sich die Dividendenzahlung bezieht). Genauso können die historischen Kurse angepasst werden.
+          <p><img src="images/nn_split_wizard.png" alt="Aktiensplit erfassen" width="616"/></p>
+          <p>Aktiensplits werden im Chart eingetragen:</p>
+          <p><img src="images/nn_split_chart.png" alt="Aktiensplits im Chart" width="577"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.11.0 (23. Februar 2014)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Verbesserte Wertpapier-Performance</td>
+          <td class="content">Die Wertpapier-Performance zeigt nun mehr Werte an: True Time-Weighted Rate of Return, Einstandswerte nach FIFO, Summe und Anzahl der Dividendenzahlungen und eine Dividenden-Performance bezogen auf den Einstandswert.
+          <p><img src="images/nn_security_performance.png" alt="Wertpapier-Performance" width="542"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Notizen erfassen</td>
+          <td class="content">Zu Wertpapieren, Konten, Portfolios und Buchungen kann man jetzt (kurze) Notizen erfassen.
+          <p><img src="images/nn_note_account.png" alt="Beispielnotiz zu einem Konto" width="498"/></p>
+          </td>
+          </tr>
+
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.10.0 (26. Januar 2014)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Kurse aus HTML Seiten</td>
+          <td class="content">Yahoo hat keine Kurse zu einem Wertpapier? Jetzt kann man jetzt eine URL hinterlegen von Kurse extrahiert werden!
+          <p><img src="images/nn_html_download.png" alt="Kurse aus HTML Tabellen extrahieren" width="525"/></p>
+          <p>Bitte folgende Punkte beachten:
+          <ul>
+            <li>Kurse sollten im deutschen Format vorliegen (also 69,70 und nicht 69.70)</li>
+            <li>Die URL sollte immer die letzten Kurse zeigen (also kein "von" und "bis" Datum in der URL)</li>
+            <li>Dynamische geladene Tabelle werden nicht gefunden (z.B. wenn die Daten per JavaScript nachgeladen werden)</li>
+          </ul>
+          </p>
+          <p>Dieses Feature ist noch nicht komplett ausgereift - ich bin über <a href="https://github.com/buchen/portfolio/issues">Feedback</a> dankbar! Im Fehlerprotokoll findet sich immer der komplette HTML Code falls keine Kurse gefunden werden konnten.</p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Inaktive Konten</td>
+          <td class="content">Zu vielen nicht mehr genutzte Festgeldkonten? Jetzt als inaktiv markieren und filtern!
+          Diese Konten werden auch nicht mehr in den Dialogen angezeigt - so erhöht sich die Übersicht.
+          <p><img src="images/nn_inactive_accounts.png" alt="Konten als inaktiv markieren und filtern" width="342"/></p>
+          </td>
+          </tr>
+
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.9.0 (25. August 2013)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Freie Klassifizierung</td>
+          <td class="content">Mit dieser Version können die Wertpapiere und Konten frei klassifiziert und anschließend ausgewertet werden.
+          <p><img src="images/nn_classification_create.png" alt="Neue Klassifizierung anlegen" width="325"/></p>
+          <p>Die bisherigen Systeme (Asset Klassen, Asset Allocation und Branchenklassifizierung) bleiben erhalten und können jetzt editiert werden.
+          Wertpapiere können dabei auch mehreren Kategorien zugeordnet werden. Per Drag &amp; Drop sortiert man die Kategorien in jede beliebige Reihenfolge.</p>
+          <p><img src="images/nn_classification_edit.png" alt="Klassifizierung editieren" width="542"/></p>
+          <p>Die Vermögensaufstellung des Gesamtportfolios kann nach jeder Klassifizierung gruppiert werden.</p>
+          <p><img src="images/nn_classification_group_by.png" alt="Vermögensaufstellung nach Klassifizierung gruppieren" width="470"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.8.0 (27. Juni 2013)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Sparpläne</td>
+          <td class="content">Mit dem neuen Feature <strong>Sparplan</strong> kann man wiederkehrende Wertpapierkäufe automatisch generieren. Vielen Dank an <a href="https://github.com/simpsus/">simpsus</a> für die Code Contribution.
+          <p>Im ersten Schritt legt man einen Sparplan an:</p>
+          <p><img src="images/nn_create_plan.png" alt="Sparplan anlegen" width="447"/></p>
+          <p>Im zweiten Schritt kann man die fehlenden Buchungen generieren:</p>
+          <p><img src="images/nn_investment_plan.png" alt="Sparplan: Buchungen automatisch erstellen" width="542"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Konfigurationen speichern</td>
+          <td class="content">Jetzt ist es möglich mehrere Konfigurationen eines Diagramms zu speichern. Schluss mit dem ständigen Hinzufügen und Entfernen von Vergleichswerten.
+          <p><img src="images/nn_save_chart_config.png" alt="Verbesserung: Mehrere Diagrammkonfigurationen speichern" width="300"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.7.11 (20. Mai 2013)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">'Datei -> Neu...' Wizard</td>
+          <td class="content">Mit dem Wizard kann eine XML Datei bequem neu angelegt werden - inklusive vorkonfigurierter Wertpapiere. Vielen Dank an <a href="https://github.com/simpsus/">simpsus</a> für die Code Contribution.
+          <p><img src="images/nn_new_file_wizard.png" alt="Wizard um neue XML Dateien anzulegen" width="525"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Vergleichswerte im Performance-Diagramm</td>
+          <td class="content">Unter Performance -> Diagramm können jetzt Depots, Konten, Asset Klassen und Kategorien der Asset Allocation dem Diagramm hinzugefügt werden.
+          <p><img src="images/nn_addl_perf_lines.png" alt="Neue Vergleichswerte unter Performance -> Diagramm: einzelne Konten, Depots, Kategorien, Asset Klassen" width="529"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Frei konfigurierbare Farben</td>
+          <td class="content">Endlich: Farben (und Linien und Fläche) frei konfigurieren. Die Einstellungen werden ebenfalls in der XML Datei gespeichert und stehen beim nächsten Öffnen wieder zur Verfügung.
+          <p><img src="images/nn_configure_colors.png" alt="Frei konfigurierbare Farben in den Liniendiagrammen unter Performance und Vermögensaufstellung" width="524"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Erträge nach Konten</td>
+          <td class="content">Unter dem Reiter 'Erträge nach Konten' in der Performance-Berechnung werden die Erträge jetzt auch nach Konten gruppiert angezeigt.  Müssen vielleicht die Freistellungsaufträge neu verteilt werden?
+          <p><img src="images/nn_earnings_by_account.png" alt="Gruppierung der Erträge nach Konten (Reiter unter Performance)" width="403"/></p>
+          </td>
+          </tr>
+          <tr>
+          <td class="title">Datum des letzten Kurses</td>
+          <td class="content">Der Wertpapier-Liste können die Spalten mit dem Datum des letzter bzw. letzer historischer Kurses hinzugefügt werden. Dabei werden <strong>Werte, die älter als 7 Tage sind, farblich hevorgehoben</strong> um Probleme mit dem automatischen Kursdownload schneller zu erkennen.
+          <p><img src="images/nn_latest_date_marked.png" alt="Datum des letzten (historischen) Kurses als Spalte in der Wertpapierliste wählbar" width="542"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.7.10 (21. April 2013)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Vergleichswerte im Diagramm</td>
+          <td class="content">Unter Vermögensaufstellung -> Diagramm können jetzt Depots, Konten, Kategorien aus der Asset Allocation und einzelne Wertpapiere dem Diagramm hinzufügt werden.
+          <p><img src="images/nn_addl_chart_lines.png" alt="Vergleichswerte zu Vermögensaufstellung -> Diagramm hinzufügen" width="542"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.7.7 (17. März 2013)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Gegenbuchungen</td>
+          <td class="content">Ein Kauf von Wertpapieren besteht aus zwei Buchungen: einer Buchung im Portfolio und einer Buchung auf einem Konto. Bisher waren das zwei unabhängige Buchungen, die auch unabhängig voneinander editiert werden konnten. Das führte nicht nur zu schrägen Ergebnissen in der Performance-Berechnung, sondern machte auch eine nachträgliche Änderung von Buchungen aufwendig. Damit ist jetzt Schluß: <strong>ab sofort werden Gegenbuchungen korrekt editiert</strong>.
+          <p><img src="images/nn_checkdialog.png" alt="Dialog zur Behebungen von Buchungsproblemen" width="534"/></p>
+          <p>Der vorstehende Dialog zeigt existierende Probleme mit fehlenden Gegenbuchungen an. Diese Konsistenzprüfung läuft automatisch nach dem Öffnen einer Datei, kann aber auch über das Datei Menü gestartet werden. Ein Klick in die letzte Spalte listet Aktionen auf mit denen das Problem behoben werden kann.</p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.7.6 (24. Februar 2013)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Flexible Berichtszeiträume</td>
+          <td class="content">Jetzt gibt es benutzerdefinierte Zeiträume - endlich! Mit dem neuen Dialog kann man jetzt nicht nur die letzten X Jahre (oder Monate) anzeigen lassen, sondern alternativ auch ein ganz bestimmtes Datum erfassen (zum Beispiel den Depoteröffnungszeitpunkt). Die letzten 5 Zeiträume stehen in allen Ansichten zur Verfügung - so kann man alle Berichte / Diagramme für einen Zeitraum schnell abrufen.
+          <p><img src="images/nn_report_interval.png" alt="Dialog zur Erfassung der Berichtszeiträume" width="542"/></p>
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">Verbesserte Performance-Berechnung</td>
+          <td class="content">Mit dieser Version wird die Performance im Diagramm nicht mehr mit dem internen Zinsfuß (IZF) sondern als tagesaktuelle Änderung gegenüber dem Vortag berechnet. Performanceneutrale Bewegungen wie Ein-/Auszahlungen und Einlieferungen oder Auslieferungen werden natürlich berücksichtigt und nicht mitgerechnet. Die Werte können auch wöchentlich, monatlich, quartalsweise oder jährlich aggregiert werden.
+          <p>Damit stellt sich ein Investment in einen Index jetzt identisch zum Index selbst dar (vorausgesetzt natürlich dass es keine Transaktionskosten gibt).</p>
+          <p>Über den Export Button oben rechts kann man die Details der Berechnung als CSV Datei runterladen um die Rechnung nachzuvollziehen.</p>
+          <p><img src="images/nn_performance_diagram.png" alt="Performance-Diagramm mit Menü zur wöchentlichen, monatlichen, quartalsweisen oder jährlichen Aggregation" width="542"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.7.5 (3. Februar 2013)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Inaktive Wertpapiere</td>
+          <td class="content">Markiere Wertpapiere als 'inaktiv' damit sie in den Kaufdialogen nicht mehr auftauchen. So kann man steuern, dass zum Beispiel getilgte Anleihen nicht mehr sichtbar sind und die Liste der Papiere sich reduziert. Ganz löschen kann man getilgte Anleihen natürlich nicht: die Daten werden zur Berechnung der historischen Performance benötigt.</td>
+          </tr>
+
+          <tr>
+          <td class="title">Erweiterter Kursexport</td>
+          <td class="content">Exportiere <em>alle</em> Wertpapierkurse in <em>eine</em> Datei mit 'Exportieren...' -> 'Wertpapiere' -> 'Alle historischen Kurse'. In der ersten Spalte steht das Datum, anschließend gibt es je eine Spalte für jedes Wertpapier.</td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.7.4 (5. Januar 2013)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Kontextinfos im Diagramm</td>
+          <td class="content">In den Diagrammen gibt es jetzt Kontextinformationen mit den genauen Werten des anvisierten Punktes.
+          <p><img src="images/nn_chart_context_menu.png" alt="Detailierte Informationen zum anvisierten Punkt" width="542"/></p>
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">Aufstellung der Erträge</td>
+          <td class="content">Eine neue Aufstellung der Erträge gibt einen Überblick wann welche Dividenden oder Zinsen im Berichtszeitraum angefallen sind. Vielleicht dient diese Aufstellung auch der Vorfreude auf die Dividenden des kommenden Jahres - zumindest wenn man keine Papiere verkauft. :-)
+          <p><img src="images/nn_detailed_earnings.png" alt="Aufstellung der Erträge" width="542"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.7.0 (11. November 2012)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Neue Bespieldatei: dax.xml</td>
+          <td class="content">Im Installationsverzeichnis gibt es eine neue Datei <strong>dax.xml</strong>, die ein prototypisches DAX Investment trackt.
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">Klassifizierung der Branchen</td>
+          <td class="content">Zur besseren Auswertung kann jetzt jedes Wertpapier einer Branche zugeordnet werden:
+          <p>
+            <ul>
+              <li>Wählen Sie zunächst ein System zur Klassifzierung: Zur Verfügung steht der <a href="http://en.wikipedia.org/wiki/Global_Industry_Classification_Standard">Global Industry Classifcation Standard (GICS)</a> oder ein einfacheres zweistufiges System</li>
+              <li>Ordnen Sie dann die Wertpapiere im 'Bearbeiten' Dialog einer Branche zu</li>
+              <li>In der Ansicht 'Vermögensaufstellung - Branchen' stehen anschließend Auswertungen und Export zur Verfügung</li>
+            </ul>
+          </p>
+          <p>Zur Auswertung kann man eine wunderschöne <a href="http://de.wikipedia.org/wiki/Tree_Map">TreeMap</a> verwenden. Mit einem Rechtsklick taucht man in eine Branche ab, mit einem Linksklick gelangt man wieder zurück.</p>
+          <p><img src="images/nn_industry_treemap.png" alt="Verteilung der Branchen im Portfolio" width="542"/></p>
+          <p>Im Bereich 'Stammdaten' gibt es ein Überblick über die Branchen:</p>
+          <p><img src="images/nn_industry_classification.png" alt="Klassifizierung der Branchen" width="542"/></p>
+          <p>Dort kann man auch das Klassifizierungssystem auswählen (Mit der Schaltfläche 'Anwenden' wird die Klassifizierung für die aktuelle Datei aktiviert):</p>
+          <p><img src="images/nn_industry_classification_choose.png" alt="Auswahl der Klassifizierung" width="542"/></p>
+          <p>Im Dialog 'Wertpapier bearbeiten' wird eine Branche einem Wertpapier zugeordnet:</p>
+          <p><img src="images/nn_industry_edit_security.png" alt="Wertpapier editieren" width="542"/></p>
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">Performance Chart: Vergleich mit einem anderen Papier</td>
+          <td class="content">Dem Performance Chart können nun beliebige andere Papiere zugeordnet werden.  Damit lässt sich die Performance des Portfolio einfach vergleichen. Das funktioniert auch mit einem Index. Der DAX ist zum Beispiel auf Yahoo unter dem Symbol <a href="http://de.finance.yahoo.com/q?s=%5EGDAXI">^GDAXI</a> verfügbar.
+          <p><img src="images/nn_irr_chart.png" alt="Interner Zinsfuß mit einem anderen Papier vergleichen" width="542"/></p>
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">Mehr Exportmöglichkeiten</td>
+          <td class="content">Alle Daten aus dem Programm holen! Mit der neuen Version können jetzt auch die Basisdaten der Diagramme als CSV exportiert werden. So lassen sich zum Beispiel sehr einfach Diagramme in Excel erstellen.
+          <p>Die Exportfunktion befindet <strong>oben rechts</strong>.</p>
+          <p><img src="images/nn_export_asset_diagram.png" alt="Basisdaten der Diagramme exportieren" width="542"/></p>
+          <p>Auch die Asset Klassen lassen sich exportieren:</p>
+          <p><img src="images/nn_export_asset_classes.png" alt="Export der Asset Klassen" width="542"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.6.4 (19. August 2012)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Öffnen im Browser</td>
+          <td class="content">In der Wertpapierliste und der Vermögensaufstellung kann man nun direkt zu den
+          Seiten von Yahoo, OnVista und Finanzen.net dieses Wertpapiers springen.
+          <p><img src="images/nn_openinbrowser.png" alt="Öffnen im Browser" width="542"/></p>
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.6.1 (14. Juli 2012)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Automatische Aktualisierung</td>
+          <td class="content">Mit dem Menü "Nach Aktualisierungen suchen..." werden neue Programmversionen
+          installiert. Dabei werden nur die geänderten Komponenten geladen, wodurch das Update deutlich schneller wird.
+          <p><img src="images/nn_checkforupdates.png" alt="Nach Aktualsierungen suchen" width="542"/></p>
+          <p>Optional kann man in den Einstellungen (oder auch 'Benutzervorgaben') festlegen, dass bei jedem Start
+          auf vorhanden Updates geprüft wird.</p>
+          <p><img src="images/nn_checkonstart.png" alt="Beim Start nach Aktualisierungen suchen" width="542"/></p>
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">IFZ in der Vermögensaufstellung</td>
+          <td class="content">Neue Spalten in der Vermögensaufstellung:
+          <ul><li>IZF Performance (interner Zinsfuß)</li><li>Gesamt Gewinn / Verlust (inklusive Dividenden)</li></ul>
+          <p><img src="images/nn_newcolumns_assets.png" alt="Neue Spalten in der Vermögensaufstellung" width="542"/></p>
+          <p>Durchsucht werden Bezeichnung, ISIN und das Ticker Symbol.</p>
+          </td>
+          </tr>
+
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.6.0 (17. Juni 2012)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">Zusätzliche Spalten</td>
+          <td class="content">In der Vermögensaufstellung kann man zusätzliche Spalten hinzufügen:
+          <strong>ISIN, Einstandskurs, Einstandswert und Gewinn/Verlust</strong>
+          <p><img src="images/nn_hide_show_columns.png" alt="Spalten hinzufügen" width="542"/></p>
+          <p>Mit den zusätzlichen Spalten kann man die Vermögensaufstellung an die eigenen Bedürfnisse
+          anpassen. Per <strong>Drag &amp; Drop</strong> kann die Reihenfolge der Spalten geändert werden. Alle diese
+          Änderungen werden gespeichert damit die Ansicht beim nächsten Öffnen genauso wieder aussieht.</p>
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">Suchen</td>
+          <td class="content">In der Liste der Wertpapiere kann man jetzt suchen:
+          <p><img src="images/nn_search.png" alt="Suche in Wertpapieren" width="542"/></p>
+          <p>Durchsucht werden Bezeichnung, ISIN und das Ticker Symbol.</p>
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">Watchlisten</td>
+          <td class="content">Zur besseren Übersicht kann man Watchlisten in der Seitenleiste anlegen:
+          <p><img src="images/nn_watchlist_create.png" alt="Tab in der Tabelle" width="542"/></p>
+          <p>Die Wertpapiere kann man per Drag &amp; Drop aus der Wertpapierliste in die Watchliste einfügen:</p>
+          <p><img src="images/nn_watchlist_dnd.png" alt="Tab in der Tabelle" width="542"/></p>
+          <p>Das funktioniert auch zwischen zwei Dateien, die gleichzeitig geöffnet sind:</p>
+          <p><img src="images/nn_watchlist_cross_file_dnd.png" alt="Tab in der Tabelle" width="542"/></p>
+          </td>
+          </tr>
+
+          </tbody>
+          </table>
+        </div> <!-- row -->
+
+        <div class="twelve columns">
+
+          <h5>Version 0.5.4 (20. Mai 2012)</h5>
+
+          <table class="news">
+          <tbody>
+          <tr>
+          <td class="title">CSV Import</td>
+          <td class="content">Importiere Konto- und Portfolioumsätze sowie Kursdaten aus CSV Dateien.
+          <p><img src="images/shot_csv_import.png" alt="CSV Import Dialog" width="542"/></p>
+          <p>Durch einen Doppelklick in eine Spalte kann bestimmt werden, in welchem Format die Rohwerte vorliegen und in
+          welches Feld sie abgebildet werden sollen.</p>
+          <p>Falls eine ISIN nicht bekannt ist, wird ein neues Wertpapier angelegt und die Buchung damit verknüpft.</p>
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">Bruchteile</td>
+          <td class="content">Bruchteile bei Wertpapierpositionen
+          <p><img src="images/shot_buy_fractions.png" alt="Bruchteile beim Wertpapierkauf" width="542"/></p>
+          <p>Jetzt können Bruchteile von Wertpapieren gekauft werden und so zum Beispiel Sparpläne abgebildet werden.</p>
+          <p>Das Programm rechnet mit einer Genauigkeit von 5 Nachkommastellen. Um die Übersichtlichkeit zu wahren,
+          wird der Bestand in der Übersicht auf 3 Nachkommastellen gerundet.</p>
+          </td>
+          </tr>
+
+          <tr>
+          <td class="title">Tab in Tabellen</td>
+          <td class="content">Per Tab zum nächsten Eingabefeld
+          <p><img src="images/shot_tab_in_table.png" alt="Tab in der Tabelle" width="542"/></p>
+          <p>Durch einen Doppelklick eine Zelle gelangt man in den Editiermodus. Per Tab geht es zur nächsten Zelle weiter.</p>
+          </td>
+          </tr>
+
+          </tbody>
+          </table>
+        </div> <!-- row -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+        Copyright © 2012-2020 Andreas Buchen, All rights reserved <a href="impressum.html">Impressum</a> | <a href="impressum.html#datenschutz">Datenschutz</a><br/>
+        Portfolio Performance ist Open Source Software und lizenziert unter der <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License - v1.0</a>
+        </div>
+      </div>
+    </div> <!-- end container -->
+  </footer>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
