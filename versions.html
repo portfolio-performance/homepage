@@ -54,6 +54,23 @@
     <div class="container">
       <div class="row">
         <div class="twelve columns">
+          <h5>0.46.4 / 21. Juni 2020</h5>
+          <ul>
+            <li>Neu: Freie Kommentare unter Wertpapier -> Ereignisse die dann im Wertpapier-Diagramm angezeigt werden</li>
+            <li>Neu: realisierte und nicht-realisierte Kurserfolge in der Wertpapier-Performance Ansicht</li>
+            <li>Neu: Handelskalender für italienische Börsen</li>
+            <li>Verbesserung: Neben dem internen Zinsfuß gibt es jetzt auch die einfach Rendite für Trades als neue Spalte</li>
+            <li>Verbesserung: Import von PDF Dokumenten von Trade Republic, ebase, Consorsbank, BaaderBank, Volksbank Oberbayern, Scalable Capital, Commerzbank, JustTrade</li>
+            <li>Verbesserung: Beim Import von Dividenden kann man automatisch eine Gegenbuchung generieren damit das Verrechnungskonto im einen Kontostand von 0 ausweist (wenn man das Konto nicht pflegen möchte)</li>
+            <li>Verbesserung: offene Trades werden jetzt direkt nach (bzw. vor) den zuletzt geschlossenen Trades sortiert</li>
+            <li>Fix: Behebt ein Problem bei der Berechnung der realisierten und nicht-realisierten Kurserfolge wenn ein Wertpapier in mehrere Depots gehalten wird</li>
+            <li>Fix: Berechnung des Nettopreises im Wertpapier-Diagramm hat nicht den Wechselkurs der Buchung verwendet</li>
+            <li>Fix: Behebt ein Problem bei dem die EMA Berechnung nicht alle Preise einbezogen hat</li>
+            <li>Fix: Behebt ein Problem bei dem der letzte Kurs von Portfolio Report nicht importiert wurde</li>
+            <li>Fix: Behebt ein Problem bei dem die Datumsspalte bei Quandl Daten nicht erkannt wurde</li>
+            <li>Fix: Behebt ein Problem das Buchungen am ersten Tag des Berichtszeitraums nicht zu dem investierten Kapital zählten</li>
+          </ul>
+
           <h5>0.46.3 / 10. Mai 2020</h5>
           <ul>
             <li>Fix: Behebt eine MonetaryException bei der Anzeige der Wertpapier-Performance</li>
