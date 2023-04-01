@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio Performance - Survey</title>
+  <meta name="description" content="Übersicht über alle vorherigen Aktualisierungen des Open Source Programm Portfolio Performance">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+<body>
+
+<script>
+  var a = /[\?&]lang=([^\/&#\?]+)/i.exec(window.location.search);
+  if (a) {
+    if (a[1] == 'de') {
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScsJ490W1rIkfKyQJflctzp8i1IMxrgmpCYEGSScK532cKveg/viewform?usp=sf_link";
+    } else {
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScUVKAhtOZccHgutJywx02Wx1qs5lMdjb0Wd_FA5j0hAiLl1g/viewform?usp=sf_link";
+    }
+  } else {
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScsJ490W1rIkfKyQJflctzp8i1IMxrgmpCYEGSScK532cKveg/viewform?usp=sf_link";
+  }
+  </script>
+
+  <header>
+  <div class="band navigation">
+    <nav class="primary container">
+      <div class="row">
+        <div class="one-half column">
+          <h3>Umfrage / Survey 2023</h3>
+        </div>
+        <div class="one-half column">
+          <ul>
+            <li><a href="https://forum.portfolio-performance.info">Forum</a></li>
+            <li><a href="https://github.com/buchen/portfolio">Source</a></li>
+            <li><a href="/" class="download">Download</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- end nav -->
+  </div> <!-- end band -->
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="two columns">
+          <a href="/"><img class="logo" src="images/logo.svg"/></a>
+        </div>
+        <div class="ten columns teaser">
+          <p>Mach mit bei der Umfrage zu Portfolio Performance. Lass uns wissen das Dir wichtig ist und worauf wir uns bei der Entwicklung in den nächsten Monaten konzentrieren sollten. Es dauert nur 5 Minuten.</p>
+          <p>Take part in the Portfolio Performance Survey. Let us know what's important to you and what we should focus on developing over the next few months. It only takes 5 minutes.</p>
+          <p><strong><a href="https://docs.google.com/forms/d/e/1FAIpQLScsJ490W1rIkfKyQJflctzp8i1IMxrgmpCYEGSScK532cKveg/viewform?usp=sf_link">Deutsch</a> <a href="https://docs.google.com/forms/d/e/1FAIpQLScUVKAhtOZccHgutJywx02Wx1qs5lMdjb0Wd_FA5j0hAiLl1g/viewform?usp=sf_link">English</a></strong></p>
+        </div>
+      </div>
+    </div> <!-- end container -->
+  </section> <!-- end section -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+        Copyright © 2012-2023 Andreas Buchen, All rights reserved <a href="impressum.html">Impressum</a> | <a href="impressum.html#datenschutz">Datenschutz</a><br/>
+        Portfolio Performance ist Open Source Software und lizenziert unter der <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License - v1.0</a>
+        </div>
+      </div>
+    </div> <!-- end container -->
+  </footer>
+
+</body>
+</html>
