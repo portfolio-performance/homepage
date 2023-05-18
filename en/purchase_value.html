@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio Performance</title>
+  <meta name="description" content="An open source tool to calculate the overall performance of an investment portfolio - across all accounts - using True-Time Weighted Return or Internal Rate of Return.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@portfolioperf">
+  <meta name="twitter:title" content="Portfolio Performance">
+  <meta name="twitter:description" content="An open source tool to calculate the overall performance of an investment portfolio - across all accounts - using True-Time Weighted Return or Internal Rate of Return.">
+  <meta name="twitter:creator" content="@portfolioperf">
+  <meta name="twitter:image" content="images/logo.png">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Portfolio Performance" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.portfolio-performance.info/" />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:description" content="An open source tool to calculate the overall performance of an investment portfolio - across all accounts - using True-Time Weighted Return or Internal Rate of Return." />
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE43JT9GZ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BE43JT9GZ0');
+  </script>
+</head>
+<body>
+  <header>
+  <div class="band navigation">
+    <nav class="primary container">
+      <div class="row">
+        <div class="twelve columns">
+          <ul>
+            <li><a href="..">Deutsch</a></li>
+            <li class="language">English</li>
+          </ul>
+        </div>
+      </div>
+    </nav> <!-- end nav -->
+  </div> <!-- end band -->
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="one-third column">
+          <img class="logo" src="../images/logo.svg"/>
+        </div>
+        <div class="two-thirds column teaser">
+          <h3>Portfolio Performance</h3>
+          <p>An <strong>open source</strong> tool to calculate the overall <strong>performance</strong> of an investment portfolio. - across all accounts - using <strong>True-Time Weighted Return</strong> or <strong>Internal Rate of Return</strong>.</p>
+        </div>
+      </div>
+    </div> <!-- end container -->
+  </section> <!-- end section -->
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <h1>Purchase Value</h1>
+              
+          <p>The purchase value is the summed value of each buy/sell transaction of the security, taken into account the reporting period. You can find it for example as a column value in Reports > Performance > Securities</p>
+          
+          <p>If the purchase date lies before the beginning of the reporting period, then the value at the beginning of the period is taken. If the purchase date lies within the period, then  the value at the purchase date is used. However, if the purchase date is after the end of the reporting period, then the purchase is not taken into account for the calculation of the purchase value.</p>
+
+          <img src="images/purchase-value-reports-securities.png" title= "Purchase Value" width="100%">
+          
+          <p>Assume the following scenario. We are now 2023, May, 15th and you have bought 30 shares at different times and quotes (see below). An overview of all buys and their respective quotes is shown below.</p>
+
+          <img src="images/purchase-value-all-transactions-buy-only.png" title= "Overview of all buy transactions" width="100%">
+          
+          <p>There are several options for the reporting period. By default, 1 year, 2 years and 3 years are available, but you can create custom periods as well (e.g. Since 1 Jan 2000 or From 1 Jan 2000 until 1 Jan 2020). The reported purchase value of a particular security is dependent upon the selected reporting period. For example, for the three buy transactions from above, the purchase value can vary between 3300 EUR and 500 EUR, depending on the selected reporting period.</p>
+          
+          <img src="images/purchase-value-reporting-periods.png" title= "Standaard reporting periods" width="30%" style="float:right">
+          
+          <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg .tg-34fe{background-color:#c0c0c0;border-color:inherit;text-align:center;vertical-align:top}
+            .tg .tg-rteb{background-color:#fcff2f;border-color:inherit;text-align:right;vertical-align:top}
+            .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+            </style>
+            <table class="tg">
+            <thead>
+              <tr>
+                <th class="tg-34fe">Period</th>
+                <th class="tg-34fe">From … to …</th>
+                <th class="tg-34fe">Purchase Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-0pky">1 year</td>
+                <td class="tg-0pky">2022, May 15 - 2023, May 15</td>
+                <td class="tg-rteb">3300 EUR</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky">2 years</td>
+                <td class="tg-0pky">2021, May 15 - 2023</td>
+                <td class="tg-rteb">3000 EUR</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky">3 years</td>
+                <td class="tg-0pky">020, May 15 - 2023, May 15</td>
+                <td class="tg-rteb">2050 EUR</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky">Custom</td>
+                <td class="tg-0pky">2000, Jan 1 - 2020, Jan 01</td>
+                <td class="tg-rteb">500 EUR</td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+        
+          <p>The 1 year period starts at 2022, May 15 and ends today (2023,May 15); sometimes also called YTD (Year To Date). Because all purchases fall before the reporting period, the value for each of them is taken from the beginning of the period. At that time (2022, May 15), the share was valued at a quote of 110 EUR (see graph). So, the total purchase value is 30 shares * 110 = 3300 EUR. This is the beginning situation of the period (also called Statement of Assets). Since, there are no purchases afterwards, this amount is also the purchase value of the 1 year period.</p>
+          
+          <p>
+          The 2 years period starts at 2021, May 15. Only the third buy falls within the period. So, buy 1 and buy 2 are evaluated at the price from the beginning of the period (= 90 EUR). So, the Statement of Assets equals 1350 EUR. There is one buy afterwards (valued at the buying quote).  The total Purchase Value of this 2 year period is therefore  (5 + 10) shares at 90 EUR + 15 shares at 110 EUR or 1350 +1650 = 3000  EUR.</p>
+          
+          <p>The 3 years period start at 2020, May 15. The second and third buy lie within the reporting period and are evaluated at their respective quotes: 10 shares at 90 EUR (= 900 EUR) and 15 shares at 110 EUR (= 1650 EUR). The beginning of the period or Statement of Assets is the result of the first buy (2020, Jan 1)  takes the quote from the beginning of the period (2020, May 15) which is the same as the purchase quote (e.g. 100 EUR); resulting in a purchase of 5 * 100 EUR = 500 EUR.</p>
+          
+          <p>The previous explanation can also be seen in the pop-over, when hovering the mouse over the Purchase Value (see figure below).</p>
+          
+          <img src="images/purchase-value-pop-over.png" title= "Pop-over at Purchase Value" width="100%">
+          
+          <P>The custom period (from 2000, Jan 1 (not included) until 2020, Jan 1 (included) has a Purchase Value of 500 EUR because it contains only the first buy (= 5 * 100 EUR). The second and third buy or not taken into account because they occur later than the period end.</P>
+          
+          <p>Things become more complicated -but with the same logic- when there are also sell transactions. Important to remember is that PP use a FIFO (First In, First OUT) method to calculate the result of a sell transaction. Suppose that you did a (rather bad timed) sell at 2021, Jul 1 2020 of 12 shares (see figure below).</p>
+          
+          <img src="images/purchase-value-all-transaction-buy-sell.png" title= "Purchase value with Sell involved" width="100%">
+
+          <p>At that moment there were 15 shares available (5 at 100 EUR and 10 at 90 EUR). Selling 12 of them will first sell the 5 shares of 100 EUR and then another 2 of 90 EUR, leaving 3 shares of 90 EUR available.</p>
+          
+          <p>Now, let's calculate the Purchase Value for the different periods.</p>
+          
+          <p>1 year period: The period runs from 2022, May 15 until 2023, May 15. All purchases are done before the beginning of the period; so each of them is valued at the price of 2022, May 15, which is 110 EUR. How many shares are available? 5 + 10 - 12 + 15 = 18 at 110 EUR or 1980 EUR.</p>
+          
+          <p>2 years period running from  2021, May 15 until 2023, May 15. Only the last buy transaction falls within the period and is evaluated at its current quote (110 EUR). The Statement of Assets consists of 3 shares (15 buy - 12 sell). They are evaluated at the price from the beginning of the period (90 EUR). The Purchase Value for the 2 years period is: 3 * 90 EUR + 15 * 110 EUR = 1920 EUR.</p>
+
+          <p>3 years period running from  2020, May 15 until 2023, May 15. The Statement of Assets is 0 EUR because all 5 shares from buy 1 are sold (FIFO) on 2021, Jul 15. From the second buy, only 3 shares are remaining, evaluated at 90 EUR. The third buy is evaluated at 110 EUR. The Purchase Value of the 3 years period is 3 shares * 90 EUR + 15 shares * 110 EUR = 1920 EUR.</p>
+
+          </p>The longer periods have the same Purchase Value as the 3 years period.</p>
+        </div>
+      </div>
+    </div>
+        
+  </section> <!-- end section -->  
+    
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+        The Microsoft logo, the Apple logo and Mac are trademarks of Microsoft Corporation and Apple Inc. respectively, registered in the U.S. and/or other countries.<br/>
+        Copyright © 2012-2023 Andreas Buchen, All rights reserved <a href="../impressum.html">Impressum</a> | <a href="../impressum.html#datenschutz">Datenschutz</a><br/>
+        Portfolio Performance ist Open Source Software und lizenziert unter der <a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License - v1.0</a>
+        </div>
+      </div>
+    </div> <!-- end container -->
+  </footer>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
