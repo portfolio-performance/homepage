@@ -1,1 +1,0 @@
-window.cookieconsent_options = {"message":"Diese Webseite verwendet Cookies. Wenn Sie auf der Seite weitersurfen, stimmen Sie der Cookie-Nutzung zu.","dismiss":"Verstanden","learnMore":"Mehr Informationen","link":"impressum.html#datenschutz","theme":"light-bottom"};
