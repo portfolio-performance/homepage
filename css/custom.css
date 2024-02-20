@@ -141,20 +141,30 @@ nav.primary ul li a.download:hover {
 	margin-bottom: 1rem;
 }
 
-.banner .downloads .win,
-.banner .downloads .macosx,
-.banner .downloads .linux {
+.downloads {
+	text-align: center;
+}
+
+.downloads .win,
+.downloads .macosx,
+.downloads .linux {
+	color: white;
+}
+
+.downloads .win,
+.downloads .macosx,
+.downloads .linux {
 	background-repeat: no-repeat;
 	background-size: 32px;
 	background-position: 9px 3px;
-	background-color: #AFBFCE;
+	background-color: black;
 
 	display: inline-block;
   	height: 38px;
-  	line-height: 38px;
+  	line-height: 40px;
   	margin-bottom: 10px;
   	padding: 0px 10px 0px 50px;
-	border-radius: 4px;
+	border-radius: 6px;
 	text-decoration: none;
 
 	-webkit-transition: background 0.4s ease-out;
@@ -164,21 +174,18 @@ nav.primary ul li a.download:hover {
 	transition: background 0.4s ease-out;
 }
 
-.banner .downloads .win {
+.downloads .win {
 	background-image: url("../images/download-windows.png");
 }
 
-.banner .downloads .macosx {
+.downloads .macosx {
 	background-image: url("../images/download-macosx.png");
 }
 
-.banner .downloads .linux {
+.downloads .linux {
 	background-image: url("../images/download-linux.png");
 }
 
-.banner .downloads a:hover {
-	background-color: #A0AEBC;
-}
 
 /* features */
 
@@ -192,18 +199,28 @@ nav.primary ul li a.download:hover {
 
 .screenshots {
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
-.screenshots a img {
-	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);	
+.screenshots img {
+	max-width: 90%;
 }
 
-.screenshots figure {
-	display: inline-block;
-	margin: 5px;
+.desktop {
+	border-radius: 2px;
+	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.phone {
+	display: block;
+	position: absolute;
+	right: -2rem;
+	top: 2rem;
+	max-height: 50%;
+	border: 1px solid gray;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 /* misc */
