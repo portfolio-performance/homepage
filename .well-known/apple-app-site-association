@@ -1,0 +1,19 @@
+{
+    "applinks": {
+        "details": [
+            {
+                "appIDs": [],
+                "components": []
+            }
+        ]
+    },
+    "webcredentials": {
+        "apps": [
+            "6451118191.software.msm.portfolio-performance",
+            "6477876648.software.msm.portfolio-performance.dev"
+        ]
+    },
+    "appclips": {
+        "apps": []
+    }
+}
