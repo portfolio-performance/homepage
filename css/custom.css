@@ -99,6 +99,7 @@ nav.primary ul li a.download:hover {
 
 .banner .teaser {
 	margin-top: 2.5rem;
+	text-align: left;
 }
 
 .banner a {
@@ -141,19 +142,31 @@ nav.primary ul li a.download:hover {
 	margin-bottom: 1rem;
 }
 
+.installer {
+	padding-top: 5px;
+	text-align: left;
+}
+
+
 .downloads {
 	text-align: center;
 }
 
 .downloads .win,
+.installer .win,
 .downloads .macosx,
-.downloads .linux {
+.installer .macosx,
+.downloads .linux,
+.installer .linux {
 	color: white;
 }
 
 .downloads .win,
+.installer .win,
 .downloads .macosx,
-.downloads .linux {
+.installer .macosx,
+.downloads .linux,
+.installer .linux {
 	background-repeat: no-repeat;
 	background-size: 32px;
 	background-position: 9px 3px;
@@ -174,14 +187,17 @@ nav.primary ul li a.download:hover {
 	transition: background 0.4s ease-out;
 }
 
-.downloads .win {
+.downloads .win,
+.installer .win {
 	background-image: url("../images/download-windows.png");
 }
 
-.downloads .macosx {
+.downloads .macosx,
+.installer .macosx {
 	background-image: url("../images/download-macosx.png");
 }
 
+.installer .linux,
 .downloads .linux {
 	background-image: url("../images/download-linux.png");
 }
