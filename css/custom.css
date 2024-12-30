@@ -187,6 +187,12 @@ nav.primary ul li a.download:hover {
 	transition: background 0.4s ease-out;
 }
 
+.installer .win.primary,
+.installer .macosx.primary,
+.installer .linux.primary {
+	background-color: #3573F9;
+}
+
 .downloads .win,
 .installer .win {
 	background-image: url("../images/download-windows.png");
